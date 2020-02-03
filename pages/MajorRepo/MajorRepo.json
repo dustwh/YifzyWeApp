@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "专业库",
+  "usingComponents": {
+    "i-input": "../../dist/input/index",
+    "i-button": "../../dist/button/index",
+    "i-tabs": "../../dist/tabs/index",
+    "i-tab": "../../dist/tab/index",
+    "i-collapse": "../../dist/collapse/index",
+    "i-collapse-item": "../../dist/collapse-item/index"
+  }
+}

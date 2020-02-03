@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "i-card": "../../dist/card/index",
+    "i-input": "../../dist/input/index",
+    "i-message": "../../dist/message/index"
+  }
+}

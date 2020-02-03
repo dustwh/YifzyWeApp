@@ -1,0 +1,33 @@
+/* pages/holTest/holTest.wxss */
+.textview{
+  position: fixed;
+  width: 100%;
+  top:90rpx;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.timeer-and-counter{
+  position: fixed;
+  width: 100%;
+  top:10rpx;
+  padding-left: 4.5%;
+  padding-right: 4.5%;
+}
+.textfont{
+  font-weight: 500;
+  font-size: 40rpx;
+}
+.ans{
+  position: fixed;
+  width: 100%;
+  bottom:0px;
+}
+.flex-item{
+  margin-left:10rpx ;
+  margin-right: 10rpx;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+}
+.weui-input{
+  border: solid 1px grey
+}

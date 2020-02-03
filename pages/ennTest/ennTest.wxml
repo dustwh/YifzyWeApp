@@ -1,0 +1,30 @@
+<!--pages/ennTest/ennTest.wxml-->
+<view class="timeer-and-counter container" style="justify-content:space-between">
+<view class="flex-item" style="color:grey"><text style="color:grey">已用  </text>{{num}} 秒</view>
+<view class="flex-item"><text style="color:red">{{which}}</text>/36</view>
+</view>
+<view class="textview textfont container f-col center">
+  <text>选择以下你认为最恰当或最接近描述自己的性格的句子A或B
+
+  {{textA}}
+
+  {{textB}}
+  </text>
+  
+</view>
+
+<view class="ans">
+  <i-panel wx:if="{{lastone}}" title="group-水果">
+      <i-button bind:click="handleA" type="ghost">A</i-button>
+      <i-button bind:click="handleB" type="ghost">B</i-button>
+  </i-panel>
+  <i-panel wx:if="{{!lastone}}" title="group-水果">
+      <i-button bind:click="submit" type="ghost">提交</i-button>
+  </i-panel>
+  <view style="width:100%;height:40rpx"></view>
+  <!-- <i-button bindclick="handleClick">上一题</i-button> -->
+</view>
+
+<i-modal title="完成作答" visible="{{ visible3 }}" actions="{{ actions3 }}" bind:click="handleClick3">
+    <view>已经成功提交</view>
+</i-modal>

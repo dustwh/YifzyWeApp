@@ -1,0 +1,18 @@
+<!--pages/subRecMaj/subRecMaj.wxml-->
+<view style='width: 100%;  height: 30rpx' />
+<text class="mustSub">请选择一门首选科目</text>
+<view style='width: 100%;  height: 30rpx' />
+<i-button bind:click="handleClick" type="success" shape="circle" size="small">物理</i-button>
+<i-button bind:click="handleClick" type="success" shape="circle" size="small">历史</i-button>
+
+
+<view style='width: 100%;  height: 45rpx' />
+<text class="mustSub">请选择两门再选科目</text>
+<view style='width: 100%;  height: 30rpx' />
+<i-button bind:click="handleClick" type="success" shape="circle" size="small">政治</i-button>
+<i-button bind:click="handleClick" type="success" shape="circle" size="small">地理</i-button>
+<i-button bind:click="handleClick" type="success" shape="circle" size="small">生物</i-button>
+<i-button bind:click="handleClick" type="success" shape="circle" size="small">化学</i-button>
+
+<view style='width: 100%;  height: 100rpx' />
+<i-button bind:click="handleClick" type="success" shape="circle" size="small">提交</i-button>

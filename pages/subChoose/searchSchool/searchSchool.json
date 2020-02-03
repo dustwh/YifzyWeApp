@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "大学查选科",
+  "usingComponents": {
+    "i-row": "../../dist/row/index",
+    "i-col": "../../dist/col/index",
+    "i-input": "../../dist/input/index",
+    "i-button": "../../dist/button/index"
+  }
+}

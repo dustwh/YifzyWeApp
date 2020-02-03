@@ -1,0 +1,123 @@
+<!--index.wxml-->
+<view class="home-banner">
+<image src="../../img/hp.png" mode="widthFix" style="width:96%;"></image>
+</view>
+<i-panel>
+    <view class="b-border" style="padding: 15px;">新高考</view>
+    <view class="container h-pannel-zone">
+      <view bindtap="startTest" class="flex-item in-center f-col">
+        <view class="flex-item">
+          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+        </view>
+        <view class="flex-item">
+          新高考测评
+        </view>
+      </view>
+      <view class="flex-item in-center f-col">
+        <view class="flex-item">
+          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+        </view>
+        <view class="flex-item">
+          科目推专业
+        </view>
+      </view>
+      <view class="flex-item in-center f-col">
+        <view class="flex-item">
+          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+        </view>
+        <view class="flex-item">
+          大学查选科
+        </view>
+      </view>
+      <view class="flex-item in-center f-col">
+        <view class="flex-item">
+          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+        </view>
+        <view class="flex-item">
+          专业查选科
+        </view>
+      </view>
+    </view>
+</i-panel>
+<view style='width: 100%;  height: 10rpx' />
+<i-panel>
+    <view class="b-border" style="padding: 15px;">专业选择</view>
+    <view class="container h-pannel-zone">
+      <view class="flex-item in-center f-col">
+        <view class="flex-item">
+          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+        </view>
+        <view class="flex-item">
+          新高考测评
+        </view>
+      </view>
+      <view class="flex-item in-center f-col">
+        <view class="flex-item">
+          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+        </view>
+        <view class="flex-item">
+          专业库
+        </view>
+      </view>
+      <view class="flex-item in-center f-col">
+        <view class="flex-item">
+          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+        </view>
+        <view class="flex-item">
+          专业排名
+        </view>
+      </view>
+      <view class="flex-item in-center f-col">
+        <view class="flex-item">
+          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+        </view>
+        <view class="flex-item">
+          职业挑专业
+        </view>
+      </view>
+    </view>
+</i-panel>
+<view style='width: 100%;  height: 10rpx' />
+<i-panel>
+    <view class="b-border" style="padding: 15px;">院校选择</view>
+    <view class="container h-pannel-zone">
+      <view class="flex-item in-center f-col">
+        <view class="flex-item">
+          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+        </view>
+        <view class="flex-item">
+          院校库
+        </view>
+      </view>
+      <view class="flex-item in-center f-col">
+        <view class="flex-item">
+          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+        </view>
+        <view class="flex-item">
+          院校简介
+        </view>
+      </view>
+      <view class="flex-item in-center f-col">
+        <view class="flex-item">
+          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+        </view>
+        <view class="flex-item">
+          院校数据
+        </view>
+      </view>
+      <view class="flex-item in-center f-col">
+        <view class="flex-item">
+          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+        </view>
+        <view class="flex-item">
+          就业报告
+        </view>
+      </view>
+    </view>
+</i-panel>
+<view style='width: 100%;  height: 200rpx' />
+<i-tab-bar current="{{ current }}" color="#F7534F" bindchange="handleChange" fixed="true">
+    <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+    <i-tab-bar-item key="quiz" icon="remind" current-icon="remind_fill" title="测评"></i-tab-bar-item>
+    <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
+</i-tab-bar>

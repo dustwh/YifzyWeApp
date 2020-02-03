@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "第二部分",
+  "usingComponents": {
+    "i-radio-group": "../../dist/radio-group/index",
+    "i-radio": "../../dist/radio/index",
+    "i-button": "../../dist/button/index",
+    "i-tag": "../../dist/tag/index",
+    "i-modal": "../../dist/modal/index"
+  }
+}

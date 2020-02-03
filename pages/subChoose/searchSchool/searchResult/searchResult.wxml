@@ -1,0 +1,45 @@
+<!--pages/subChoose/searchSchool/searchResult/searchResult.wxml-->
+<view>
+  <i-row>
+    <i-col span="4" i-class="col-class">
+      <image src="../../../../img/neu.png" style="width:106rpx;height:106rpx"></image>
+    </i-col>
+    <i-col span="20" i-class="col-class">
+      <view class="flex-column" style="height:106rpx;display:flex;flex-direction: column;align-content:center;justify-content:center">
+        <text class="schoolCardItem schoolName flex-view-item">{{schoolName}}</text>
+        <text class="schoolCardItem tag flex-view-item">{{tag}}</text>
+      </view>
+    </i-col>
+  </i-row>
+</view>
+
+
+<view>
+  <view>
+    <i-row class="tableHead">
+      <i-col span="10" i-class="col-class">
+        <view class="table_parent">专业名称</view>
+      </i-col>
+      <i-col span="7" i-class="col-class">
+        <view class="table_parent">科目要求</view>
+      </i-col>
+      <i-col span="7" i-class="col-class">
+        <view class="table_parent">所含专业</view>
+      </i-col>
+    </i-row>
+    
+    <block wx:for="{{majorList}}" wx:key="index" wx:for-index='index' wx:for-item="item">
+      <i-row>
+        <i-col span="10" i-class="col-class">
+          <view class="table_parent">{{item.name}}</view>
+        </i-col>
+        <i-col span="7" i-class="col-class">
+          <view class="table_parent">{{item.require}}</view>
+        </i-col>
+        <i-col span="7" i-class="col-class">
+          <view class="table_parent">{{item.majorIncluded}}</view>
+        </i-col>
+      </i-row>
+    </block>
+  </view>
+</view>

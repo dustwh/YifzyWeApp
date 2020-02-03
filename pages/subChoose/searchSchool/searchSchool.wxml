@@ -1,0 +1,16 @@
+<!--pages/subChoose/searchSchool/searchSchool.wxml-->
+<view class="search-area">
+  <i-row>
+    <i-col offset="1" span="17" i-class="col-class" style="height:76rpx;background-color:#ff0000">
+      <i-panel title="圆角输入框">
+        <i-input value="{{ value1 }}" autofocus placeholder="搜索感兴趣的大学" />
+      </i-panel>
+    </i-col>
+    <i-col offset="1" span="3" i-class="col-class" style="height:76rpx;background-color:#ff0000">
+      <i-button bind:click="handleSchoolSearch" type="success" inline="true" size="small">搜索</i-button>
+    </i-col>
+  </i-row>
+</view>
+<view class="guess_search"></view>
+<view class="search_history">
+</view>

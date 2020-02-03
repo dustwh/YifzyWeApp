@@ -1,0 +1,14 @@
+/* pages/MajorRepo/MajorRepo.wxss */
+.header{
+  height: 40px;
+}
+.weui-input{
+  width: 80%;
+  float: left;
+  height: 100%;
+  /*border: 1px solid black;*/
+}
+.searchBtn{
+  width: 18%;
+  float: left;
+}

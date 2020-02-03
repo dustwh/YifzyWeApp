@@ -1,0 +1,47 @@
+/* pages/subChoose/searchSchool/searchResult/searchResult.wxss */
+.tag{
+  color:#999999;
+  font-size: 22rpx
+}
+.schoolCardItem{
+  margin: 4rpx 0 4rpx 0
+}
+
+
+.table_parent {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+  background: white;
+  font-size:30rpx;
+  text-align:center;
+  box-sizing:border-box;
+  color:#595a5e;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.table {
+  border: 1px solid #dadada;
+  border-right: 0;
+  border-bottom: 0;
+  width: 98%;
+}
+ 
+.tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+ 
+.th, .td {
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  text-align: center;
+  width: 100%;
+}
+ 
+.th {
+  font-weight: 400;
+  background-color: #dadada;
+}

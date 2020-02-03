@@ -1,0 +1,14 @@
+<!--pages/infoInit/infoInit.wxml-->
+<i-panel>
+<i-cell title="联系电话"><input class="weui-input" value="{{ tel }}" type="number" title="联系电话" bindinput="bindKeyInput1" placeholder="请输入手机号" /></i-cell>
+<i-cell title="学生姓名"><input class="weui-input" value="{{ value1 }}" type="textarea" title="学生姓名" bindinput="bindKeyInput2" autofocus placeholder="名字" /></i-cell>
+<i-cell title="所在地"><input class="weui-input" value="{{ value3 }}" type="textarea" title="所在地" bindinput="bindKeyInput3" placeholder="省/市/区/学校" maxlength="50" /></i-cell>
+    <i-cell title="是否是新高考">
+      <i-switch value="{{switch1}}" size="large" bind:change="onChange" slot="footer">
+            <view slot="open">是</view>
+            <view slot="close">否</view>
+        </i-switch>
+    </i-cell>
+</i-panel>
+<view style='width: 100%;  height: 40rpx' />
+<i-button bind:click="confirm" type="primary">确认信息</i-button>

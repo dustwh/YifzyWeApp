@@ -1,0 +1,45 @@
+<!--pages/subInterest/subInterest.wxml-->
+<view class="timeer-and-counter container" style="justify-content:space-between">
+<view class="flex-item" style="color:grey"><text style="color:grey">已用  </text>{{num}} 秒</view>
+<view class="flex-item"><text style="color:red">{{which}}</text>/55</view>
+</view>
+<view wx:if="{{lastone}}" class="textview textfont container f-col center">
+  <text>{{text}}</text>
+</view>
+<view wx:if="{{!lastone}}" class="textview container f-col center">
+  <text class="textfont">请将以下六个学科根据自身因素排序并把序号按顺序填写在空格中</text>
+  <view style="width:100%;height:40rpx"></view>
+  <view class="container f-row" style="height:100rpx">
+    <view class="flex-item"><i-tag color="yellow">1地理</i-tag></view>
+    <view class="flex-item"><i-tag color="yellow">2历史</i-tag></view>
+    <view class="flex-item"><i-tag color="yellow">3政治</i-tag></view>
+    <view class="flex-item"><i-tag color="blue">4生物</i-tag></view>
+    <view class="flex-item"><i-tag color="blue">5物理</i-tag></view>
+    <view class="flex-item"><i-tag color="blue">6化学</i-tag></view>
+  </view>
+  <view class="container f-row">
+    <view class="flex-item"><input maxlength="1" type="number" bindinput="bindKeyInput1" class="weui-input" auto-focus/></view>
+    <view class="flex-item"><input maxlength="1" type="number" bindinput="bindKeyInput2" class="weui-input" /></view>
+    <view class="flex-item"><input maxlength="1" type="number" bindinput="bindKeyInput3" class="weui-input" /></view>
+    <view class="flex-item"><input maxlength="1" type="number" bindinput="bindKeyInput4" class="weui-input" /></view>
+    <view class="flex-item"><input maxlength="1" type="number" bindinput="bindKeyInput5" class="weui-input" /></view>
+    <view class="flex-item"><input maxlength="1" type="number" bindinput="bindKeyInput6" class="weui-input" /></view>
+  </view>
+</view>
+<view class="ans">
+  <i-panel wx:if="{{lastone}}" title="group-水果">
+      <i-button bind:click="handleA" type="ghost">非常符合</i-button>
+      <i-button bind:click="handleB" type="ghost">比较符合</i-button>
+      <i-button bind:click="handleC" type="ghost">一般</i-button>
+      <i-button bind:click="handleD" type="ghost">不太符合</i-button>
+      <i-button bind:click="handleE" type="ghost">很不符合</i-button>
+  </i-panel>
+  <i-panel wx:if="{{!lastone}}" title="group-水果">
+      <i-button bind:click="submit" type="ghost">提交</i-button>
+  </i-panel>
+  <view style="width:100%;height:40rpx"></view>
+  <!-- <i-button bindclick="handleClick">上一题</i-button> -->
+</view>
+<i-modal title="完成作答" visible="{{ visible3 }}" actions="{{ actions3 }}" bind:click="handleClick3">
+    <view>已经成功提交</view>
+</i-modal>

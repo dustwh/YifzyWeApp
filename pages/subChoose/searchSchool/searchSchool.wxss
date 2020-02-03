@@ -1,0 +1,14 @@
+/* pages/subChoose/searchSchool/searchSchool.wxss */
+page {
+    background-color: #f5f5f5;
+}
+.search-area{
+  background-color: white;
+  height: 105rpx;
+  padding-top: 15rpx;
+}
+.i-input-title{
+  color:gray;
+  height: 42rpx;
+  font-size: 42rpx
+}

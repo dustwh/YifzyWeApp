@@ -1,0 +1,83 @@
+<!--pages/test/text.wxml-->
+<view class='page_row' bindtap="suo">
+  <view class="search">
+    <view class="df search_arr">
+      <icon class="searchcion" size='20' type='search'></icon>
+      <input class="" placeholder="搜索感兴趣的大学" value="{{searchValue}}"/>
+    </view>
+  </view>
+  <view class='sousuo btn-mellon'>搜索</view>
+</view> 
+
+
+<view class="container func-zone">
+  <view class="in-center f-col">
+    <image src="../../img/neu.png" style="width:75rpx;height:75rpx"></image>
+    <text class="icon-lable">院校库</text>
+  </view>
+  <view class="in-center f-col">
+    <image src="../../img/neu.png" style="width:75rpx;height:75rpx"></image>
+    <text class="icon-lable">院校简介</text>
+  </view>
+  <view class="in-center f-col">
+    <image src="../../img/neu.png" style="width:75rpx;height:75rpx"></image>
+    <text class="icon-lable">院校数据</text>
+  </view>
+  <view class="in-center f-col">
+    <image src="../../img/neu.png" style="width:75rpx;height:75rpx"></image>
+    <text class="icon-lable">就业报告</text>
+  </view>
+</view>
+
+<view class="container f-row center" style="height:60rpx;background-color:#f9f9f9;padding-left:35rpx;padding-right:35rpx">
+  <text class="rec-tappable" bindtap="tap_a_rec">热门院校</text>
+  <text class="rec-tappable" bindtap="tap_a_rec">水利工程</text>
+  <text class="rec-tappable" bindtap="tap_a_rec">机械工程</text>
+  <text class="rec-tappable" bindtap="tap_a_rec">数学</text>
+  <text class="rec-tappable" bindtap="tap_a_rec">建筑学</text>
+  <text class="rec-tappable" bindtap="tap_a_rec">物理学</text>   
+</view>
+
+<view>
+  <view class="container f-col">
+    <view class="flex-item container f-row s-cell">
+      <view class="school-l-cell in-center">
+        <image src="../../img/neu.png" style="width:75rpx;height:75rpx"></image>
+      </view>
+      <view class="school-m-cell">
+        <view class="s-name">
+          <view>北京大学<label style="margin-left:15rpx"></label><label class="s-t">985</label><label class="s-t">985</label><label class="s-t">985</label></view>
+          <view class="s-p">综合/教育部/公立</view>
+        </view>
+      </view>
+      <view class="school-r-cell"><i-icon color="#9B9B9B" type="coordinates_fill" /><lable class="loc-name">北京</lable></view>
+    </view>
+
+    <view class="flex-item container f-row s-cell">
+      <view class="school-l-cell in-center">
+        <image src="../../img/neu.png" style="width:75rpx;height:75rpx"></image>
+      </view>
+      <view class="school-m-cell">
+        <view class="s-name">
+          <view>北京大学<label style="margin-left:15rpx"></label><label class="s-t">985</label><label class="s-t">985</label><label class="s-t">985</label></view>
+          <view class="s-p">综合/教育部/公立</view>
+        </view>
+      </view>
+      <view class="school-r-cell"><i-icon color="#9B9B9B" type="coordinates_fill" /><lable class="loc-name">北京</lable></view>
+    </view>
+
+    <view class="flex-item container f-row s-cell">
+      <view class="school-l-cell in-center">
+        <image src="../../img/neu.png" style="width:75rpx;height:75rpx"></image>
+      </view>
+      <view class="school-m-cell">
+        <view class="s-name">
+          <view>北京大学<label style="margin-left:10rpx"></label><label class="s-t">985</label><label class="s-t">985</label><label class="s-t">985</label></view>
+          <view class="s-p">综合/教育部/公立</view>
+        </view>
+      </view>
+      <view class="school-r-cell"><i-icon color="#9B9B9B" type="coordinates_fill" /><lable class="loc-name">北京</lable></view>
+    </view>
+
+  </view>
+</view>

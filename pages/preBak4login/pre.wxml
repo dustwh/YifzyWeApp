@@ -1,0 +1,10 @@
+<i-message id="message" />
+<view style='width: 100%;  height: 100rpx' />
+<text style="font-size:30rpx;font-weight:600;margin-left:40rpx">欢迎</text>
+<view style='width: 100%;  height: 20rpx' />
+<i-card title="一帆志愿" extra="请授权登录" thumb="../../img/icon.png">
+    <view slot="content">
+      <button type="default" plain="true" type="primary" bindtap="login" hover-class="other-button-hover"> 授权登录 </button>
+    </view>
+    <view slot="footer">本软件已经申请软件著作权</view>
+</i-card>

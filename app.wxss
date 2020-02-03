@@ -1,0 +1,27 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-sizing: border-box;
+} 
+.center{
+  align-items: center;
+}
+.in-center{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center
+}
+.f-row{
+  flex-direction: row;
+}
+.f-col{
+  flex-direction: column;
+}
+.btn-mellon{
+  background-color:#F7534F;
+  color: white
+}

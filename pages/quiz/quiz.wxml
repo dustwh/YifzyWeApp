@@ -1,0 +1,49 @@
+<!--pages/quiz/quiz.wxml-->
+<view class="intro">
+  <i-row>
+    <i-col offset="1" span="22" i-class="col-class" class="intro-text">
+      据统计，每年有70%大学生后悔当初选择的志愿。究其原因，都是因为当初没有真正找到适合自己的专业。      
+    </i-col>
+  </i-row>
+</view>
+<view>
+  <i-row>
+    <i-col offset="1" span="22" i-class="col-class">
+      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:220rpx;background-color:#F7A490">
+        <view class="c-tittlet">做些测试吧</view>
+        <view class="c-text-t">{{text0}}</view></view>
+
+      <view bindtap="checkReport" class="quiz-intro-card card-color-0" style="margin-top:30rpx;height:88rpx;background-color:#4A90E2">
+        <view class="check-report-btn">做完测试后点击这里查看报告</view>
+      </view>
+      <view bindtap="toAllTest" class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:160rpx;background-color:#D3EAF9">
+        <view class="c-tittle">开始新高考测试</view>
+        <view class="c-text">{{text1}}</view></view>
+      <!-- <view bindtap="unnameFunction1" class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:160rpx;background-color:#D3EAF9">
+        <view class="c-tittle">测测你的性格</view>
+        <view class="c-text">{{text2}}</view></view>
+      <view bindtap="unnameFunction2" class="quiz-intro-card card-color-2" style="margin-top:22rpx;height:160rpx;background-color:#B4E9C4">
+        <view class="c-tittle">测测你的兴趣</view>
+        <view class="c-text">{{text3}}</view>
+      </view>
+      <view bindtap="unnameFunction3" class="quiz-intro-card card-color-3" style="margin-top:22rpx;height:160rpx;background-color:#FFCF78">
+        <view class="c-tittle">测测你的优势学科</view>
+        <view class="c-text">{{text4}}</view>
+      </view> -->
+      <view bindtap="unnameFunction4" class="quiz-intro-card" style="margin-top:22rpx;height:180rpx;background-color:#FFFFFF">
+        <view class="c-tittle">更多其它心理测评敬请期待</view>
+        <view class="c-text">一帆团队专业测评师正为您制定更多测评，精彩即将呈现~</view>
+      </view>
+    </i-col>
+  </i-row>
+</view>
+
+
+<view style='width: 100%;  height: 200rpx' />
+
+
+<i-tab-bar current="{{ current }}" color="#F7534F" bindchange="handleChange" fixed="true">
+    <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
+    <i-tab-bar-item key="quiz" icon="remind" current-icon="remind_fill" title="测评"></i-tab-bar-item>
+    <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
+</i-tab-bar>
