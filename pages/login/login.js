@@ -89,7 +89,7 @@ Page({
       success: res => {
       // console.log(res.code);
       wx.request({
-        url: 'http://192.168.43.187:8080/weapp/gpn',
+        url: 'http://192.168.43.187:8080/weapp/getPhoneNumber',
         data: {
           'encryptedData': e.detail.encryptedData,
           'iv': e.detail.iv,
