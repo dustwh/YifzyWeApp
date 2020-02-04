@@ -16,6 +16,32 @@ Page({
       url: '../logs/logs'
     })
   },
+  toAtestPage: function(){
+    var sessionId = wx.getStorageSync("sessionId")
+    // console.log(sessionId)
+    wx.request({
+      url: 'http://192.168.43.187:8080/weapp/t',
+      header: {
+        'content-type': 'application/json',
+        'Cookie': sessionId
+      },
+      success: function (res) {
+        console.log(res)
+      }
+    })
+  },
+  checkLogin:function(){
+    wx.checkSession(
+      {
+        success: function () {
+          console.log("OK logged in")
+        },
+        fail:function(){
+          console.log("fail")
+        }
+      }
+    )
+  },
   onLoad: function() {
     var  phone = wx.getStorageSync('phone');
     if (app.globalData.userInfo) {
@@ -57,32 +83,33 @@ Page({
     })
   },
   getPhoneNumber: function (e) {
-    console.log(e.detail.iv);
-    console.log(e.detail.encryptedData);
+    // console.log(e.detail.iv);
+    // console.log(e.detail.encryptedData);
     wx.login({
-          success: res => {
-          console.log(res.code);
-    wx.request({
-      url: 'http://192.168.43.187:8080/weapp/gpn',
-      data: {
-        'encryptedData': e.detail.encryptedData,
-        'iv': e.detail.iv,
-        'codes': res.code
-      },
-      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-      header: {
-        'content-type': 'application/json'
-      }, // 设置请求的 header
-      success: function (res) {
-        wx.setStorageSync('phone', res.data.phoneNumber);
-        wx.showToast({
-          title: "号码为："+res.data.phoneNumber,
-          icon: 'none'
-        })
-      },
-      fail: function (err) {
-        console.log(err);
-      }
+      success: res => {
+      // console.log(res.code);
+      wx.request({
+        url: 'http://192.168.43.187:8080/weapp/gpn',
+        data: {
+          'encryptedData': e.detail.encryptedData,
+          'iv': e.detail.iv,
+          'codes': res.code
+        },
+        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+        header: {
+          'content-type': 'application/json'
+        }, // 设置请求的 header
+        success: function (res) {
+          wx.setStorageSync('phone', res.data.phoneNumber);
+          wx.setStorageSync('sessionId', 'JSESSIONID=' + res.data.yifzySessionId);
+          wx.showToast({
+            title: "号码为："+res.data.phoneNumber,
+            icon: 'none'
+          })
+        },
+        fail: function (err) {
+          console.log(err);
+        }
     })
   }
   })

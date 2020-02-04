@@ -12,3 +12,7 @@
     <text class="user-motto">{{motto}}</text>
   </view>
 </view>
+<view>
+  <button bindtap="toAtestPage">toAtestPage</button>
+  <button bindtap="checkLogin">asdsad</button>
+</view>
