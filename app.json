@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/infoInit/infoInit",
     "pages/login/login",
     "pages/homepage/homepage",
     "pages/login2/login2",
@@ -10,7 +11,6 @@
     "pages/newCE/newCE",
     "pages/quiz/quiz",
     "pages/subInterest/subInterest",
-    "pages/infoInit/infoInit",
     "pages/schoolChoose/schoolChoose",
     "pages/text/text",
     "pages/subRecMaj/subRecMaj",
@@ -22,7 +22,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
+    "navigationBarBackgroundColor": "#F76260",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },

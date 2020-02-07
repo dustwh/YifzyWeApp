@@ -89,7 +89,7 @@ Page({
       success: res => {
       // console.log(res.code);
       wx.request({
-        url: 'http://192.168.43.187:8080/weapp/getPhoneNumber',
+        url: 'http://127.0.0.1:8080/weapp/getPhoneNumber',
         data: {
           'encryptedData': e.detail.encryptedData,
           'iv': e.detail.iv,
@@ -102,10 +102,20 @@ Page({
         success: function (res) {
           wx.setStorageSync('phone', res.data.phoneNumber);
           wx.setStorageSync('sessionId', 'JSESSIONID=' + res.data.yifzySessionId);
-          wx.showToast({
-            title: "号码为："+res.data.phoneNumber,
-            icon: 'none'
-          })
+          
+          // wx.showToast({
+          //   title: "号码为："+res.data.phoneNumber,
+          //   icon: 'none'
+          // })
+          if (res.data.if_info_compelet=="1"){
+            wx.redirectTo({
+              url: '../homepage/homepage',
+            })
+          }else{
+            wx.redirectTo({
+              url: '../infoInit/infoInit',
+            })
+          }
         },
         fail: function (err) {
           console.log(err);
