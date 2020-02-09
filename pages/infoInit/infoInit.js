@@ -114,44 +114,51 @@ Page({
     console.log(cityInfo)
     console.log(districtInfo)
     console.log(schoolInfo)
-    // need check
-    wx.request({
-      url: "http://localhost:8080/weapp/wxSaveInitInfo",
-      method: "POST",
-      data: {
-        telInfo:telInfo,
-        markInfo:markInfo,
-        yearInfo:yearInfo,
-        subjectcode:subjectcode,
-        provinceInfo:provinceInfo,
-        cityInfo:cityInfo,
-        districtInfo:districtInfo,
-        schoolInfo:schoolInfo
-      },
-      header: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      success: function (res) {
-        if (res.statusCode == '200') {
-          console.log(res.data)
-          if (res.data == "success") {
-            wx.setStorageSync("phone", that.data.tel)
-            wx.redirectTo({
-              url: '../homepage/homepage',
-            })
+    if (markInfo == "" || yearInfo == 2020 || (yearInfo == 2017 && subjectcode == 0) || this.data.regionCode == "" || schoolInfo==0){
+      wx.showToast({
+        title: "请补全全部信息",
+        icon: 'none'
+      })
+    }else{
+      wx.request({
+        url: "http://localhost:8080/weapp/wxSaveInitInfo",
+        method: "POST",
+        data: {
+          telInfo: telInfo,
+          markInfo: markInfo,
+          yearInfo: yearInfo,
+          subjectcode: subjectcode,
+          provinceInfo: provinceInfo,
+          cityInfo: cityInfo,
+          districtInfo: districtInfo,
+          schoolInfo: schoolInfo
+        },
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        success: function (res) {
+          if (res.statusCode == '200') {
+            console.log(res.data)
+            if (res.data == "success") {
+              wx.setStorageSync("phone", that.data.tel)
+              wx.redirectTo({
+                url: '../homepage/homepage',
+              })
+            } else {
+              console.log("服务器错误");
+            }
           } else {
-            console.log("服务器错误");
-          }
-        } else {
-          console.log("网络似乎出小差，请检查wifi或流量")
+            console.log("网络似乎出小差，请检查wifi或流量")
 
-          // $Message({
-          //   content: '与服务器通讯失败',
-          //   type: 'error'
-          // });
-        }
-      },
-    })
+            // $Message({
+            //   content: '与服务器通讯失败',
+            //   type: 'error'
+            // });
+          }
+        },
+      })
+    }
+    // end of confirm    
   },
   onLoad: function () {
     var phone = wx.getStorageSync("phone")

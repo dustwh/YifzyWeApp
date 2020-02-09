@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/infoInit/infoInit",
     "pages/login/login",
+    "pages/infoInit/infoInit",
     "pages/homepage/homepage",
     "pages/login2/login2",
     "pages/pre/pre",
@@ -22,7 +22,7 @@
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F76260",
+    "navigationBarBackgroundColor": "#46A3FF",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
   },
