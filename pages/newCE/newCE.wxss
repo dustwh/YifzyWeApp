@@ -6,5 +6,6 @@ page {
 .round-card{
   border-style: solid;
   border-width: 0;
-  border-radius: 35rpx
+  border-radius: 35rpx;
+  color: white
 }

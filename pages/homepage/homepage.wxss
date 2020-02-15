@@ -14,3 +14,6 @@ page {
   padding-top: 30rpx;
   padding-bottom: 30rpx;
 }
+.small-font{
+  font-size: 28rpx
+}

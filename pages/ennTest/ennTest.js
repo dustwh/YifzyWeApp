@@ -46,7 +46,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "http://localhost:8080/getNextEnn",
+        url: "http://localhost:8080/weapp/getNextEnn",
         method: "GET",
         data: {
           towhich: that.data.which

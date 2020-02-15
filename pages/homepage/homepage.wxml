@@ -1,120 +1,100 @@
 <!--index.wxml-->
-<view class="home-banner">
-<image src="../../img/hp.png" mode="widthFix" style="width:96%;"></image>
+<!-- <view class="home-banner"> -->
+<!-- <image src="../../img/hp.png" mode="widthFix" style="width:96%;"></image> -->
+
+<!-- </view> -->
+<i-card title="{{name}}" extra="{{point}}" thumb="../../img/yifzyAvatar.png">
+    <view slot="content">{{school}} 新/科:{{subject}}  全省排名:{{rank}}</view>
+    <view slot="footer"><i-button bind:click="checkReport" inline="true" type="primary" shape="circle" size="small">ifquyu:小尺寸</i-button></view>
+</i-card>
+<view style='width: 100%;  height: 10rpx' />
+<i-card title="功能菜单">
+    <view slot="content">
+        <view class="container h-pannel-zone">
+
+            <view bindtap="toNewCE" class="flex-item in-center f-col">
+                <view class="flex-item">
+                    <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+                </view>
+                <view class="flex-item small-font">新高考</view>
+            </view>
+
+            <view bindtap="toQuiz" class="flex-item in-center f-col">
+                <view class="flex-item">
+                    <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+                </view>
+                <view class="flex-item small-font">测评</view>
+            </view>
+
+            <view class="flex-item in-center f-col">
+                <view class="flex-item">
+                    <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+                </view>
+                <view class="flex-item small-font">院校</view>
+            </view>
+
+            <view class="flex-item in-center f-col">
+                <view class="flex-item">
+                    <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+                </view>
+                <view class="flex-item small-font">专业</view>
+            </view>
+        </view>
+    </view>
+
+    <view slot="content">
+    <!-- <view class="b-border" style="padding: 15px;">新高考</view> -->
+        <view class="container h-pannel-zone">
+            <view bindtap="startTest" class="flex-item in-center f-col">
+                <view class="flex-item">
+                    <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+                </view>
+                <view class="flex-item small-font">分数线</view>
+            </view>
+
+            <view class="flex-item in-center f-col">
+                <view class="flex-item">
+                    <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+                </view>
+                <view class="flex-item small-font">位次批次</view>
+            </view>
+
+            <view bindtap="toUniversityRank" class="flex-item in-center f-col">
+                <view class="flex-item">
+                    <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+                </view>
+                <view class="flex-item small-font">大学排名</view>
+            </view>
+
+            <view class="flex-item in-center f-col">
+                <view class="flex-item">
+                    <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+                </view>
+                <view class="flex-item small-font">服务</view>
+            </view>
+        </view>
+    </view>
+</i-card>
+<view style='width: 100%;  height: 10rpx' />
+<i-card title="推荐院校">
+<view slot="content">
+    <!-- <view class="b-border" style="padding: 15px;">专业选择</view> -->
+    <view>清华大学</view>
+    <view>北京大学</view>
 </view>
-<i-panel>
-    <view class="b-border" style="padding: 15px;">新高考</view>
-    <view class="container h-pannel-zone">
-      <view bindtap="startTest" class="flex-item in-center f-col">
-        <view class="flex-item">
-          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
-        </view>
-        <view class="flex-item">
-          新高考测评
-        </view>
-      </view>
-      <view class="flex-item in-center f-col">
-        <view class="flex-item">
-          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
-        </view>
-        <view class="flex-item">
-          科目推专业
-        </view>
-      </view>
-      <view class="flex-item in-center f-col">
-        <view class="flex-item">
-          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
-        </view>
-        <view class="flex-item">
-          大学查选科
-        </view>
-      </view>
-      <view class="flex-item in-center f-col">
-        <view class="flex-item">
-          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
-        </view>
-        <view class="flex-item">
-          专业查选科
-        </view>
-      </view>
-    </view>
-</i-panel>
+</i-card>
 <view style='width: 100%;  height: 10rpx' />
-<i-panel>
-    <view class="b-border" style="padding: 15px;">专业选择</view>
-    <view class="container h-pannel-zone">
-      <view class="flex-item in-center f-col">
-        <view class="flex-item">
-          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
-        </view>
-        <view class="flex-item">
-          新高考测评
-        </view>
-      </view>
-      <view class="flex-item in-center f-col">
-        <view class="flex-item">
-          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
-        </view>
-        <view class="flex-item">
-          专业库
-        </view>
-      </view>
-      <view class="flex-item in-center f-col">
-        <view class="flex-item">
-          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
-        </view>
-        <view class="flex-item">
-          专业排名
-        </view>
-      </view>
-      <view class="flex-item in-center f-col">
-        <view class="flex-item">
-          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
-        </view>
-        <view class="flex-item">
-          职业挑专业
-        </view>
-      </view>
-    </view>
-</i-panel>
-<view style='width: 100%;  height: 10rpx' />
-<i-panel>
-    <view class="b-border" style="padding: 15px;">院校选择</view>
-    <view class="container h-pannel-zone">
-      <view class="flex-item in-center f-col">
-        <view class="flex-item">
-          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
-        </view>
-        <view class="flex-item">
-          院校库
-        </view>
-      </view>
-      <view class="flex-item in-center f-col">
-        <view class="flex-item">
-          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
-        </view>
-        <view class="flex-item">
-          院校简介
-        </view>
-      </view>
-      <view class="flex-item in-center f-col">
-        <view class="flex-item">
-          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
-        </view>
-        <view class="flex-item">
-          院校数据
-        </view>
-      </view>
-      <view class="flex-item in-center f-col">
-        <view class="flex-item">
-          <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
-        </view>
-        <view class="flex-item">
-          就业报告
-        </view>
-      </view>
-    </view>
-</i-panel>
+<i-card title="关于专业，你必须了解">
+<view slot="content">
+    <!-- <view class="b-border" style="padding: 15px;">专业选择</view> -->
+    <view>男生适合的专业</view>
+    <view>女生适合的专业</view>
+    <view>高薪专业</view>
+    <view>热门专业</view>
+    <view>热门专业</view>
+    <view>高薪专业</view>
+</view>
+</i-card>
 <view style='width: 100%;  height: 200rpx' />
 <i-tab-bar current="{{ current }}" color="#F7534F" bindchange="handleChange" fixed="true">
     <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>

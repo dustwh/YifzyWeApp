@@ -8,9 +8,24 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    current: 'homepage'
+    current: 'homepage',
+    name:"萨达姆",
+    point:600,
+    school:"省实验中学",
+    subject:"文科",
+    rank:10000
   },
   //事件处理函数
+  checkReport:function(){
+    wx.navigateTo({
+      url: '../report/report',
+    })
+  },
+  toQuiz:function(){
+    wx.navigateTo({
+      url: '../quiz/quiz',
+    })
+  },
   handleChange({ detail }) {
     this.setData({
       current: detail.key
@@ -22,9 +37,29 @@ Page({
       url: dest_url
     })
   },
-  startTest: function() {
+  toUniversityRank:function(){
     wx.navigateTo({
-      url: '../ennTest/ennTest',
+      url: '../universityRank/universityRank',
+    })
+  },
+  toNewCE: function() {
+    wx.navigateTo({
+      url: '../newCE/newCE',
+    })
+  },
+  // test function
+  testSession:function() {
+    var sessionId = wx.getStorageSync("sessionId")
+    console.log(sessionId)
+    wx.request({
+      url: 'http://localhost:8080/weapp/testSession',
+      header: {
+        'content-type': 'application/json',
+        'Cookie': sessionId
+      },
+      success: function (res) {
+        console.log(res.data)
+      }
     })
   },
   onLoad: function () {
