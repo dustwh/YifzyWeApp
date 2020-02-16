@@ -1,4 +1,4 @@
-// pages/newCE/newCE.js
+// pages/moreQuiz/moreQuiz.js
 Page({
 
   /**
@@ -14,11 +14,7 @@ Page({
   onLoad: function (options) {
 
   },
-  toQuiz:function(){
-    wx.navigateTo({
-      url: '../quiz/quiz',
-    })
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -17,6 +17,11 @@ Page({
       url: '../ennTest/ennTest',
     })
   },
+  toMoreQuiz:function(){
+    wx.navigateTo({
+      url: '../moreQuiz/moreQuiz',
+    })
+  },
   handleChange({ detail }) {
     this.setData({
       current: detail.key

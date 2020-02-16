@@ -1,0 +1,37 @@
+<!--pages/quiz/quiz.wxml-->
+<view class="intro">
+  <i-row>
+    <i-col offset="1" span="22" i-class="col-class" class="intro-text">
+      更多测评
+    </i-col>
+  </i-row>
+</view>
+<view class="intro">
+  <i-row>
+    <i-col offset="1" span="22" i-class="col-class">
+      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:220rpx;background-color:#F7A490">
+        <view class="c-tittlet">中国中学生心理健康测评</view>
+        <view class="c-text-t">{{text0}}</view>
+      </view>
+      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:220rpx;background-color:#9393FF">
+        <view class="c-tittlet">中小学生注意力测评</view>
+        <view class="c-text-t">{{text0}}</view>
+      </view>
+      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:220rpx;background-color:#000000">
+        <view class="c-tittlet">考试焦虑测评</view>
+        <view class="c-text-t">{{text0}}</view>
+      </view>
+      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:220rpx;background-color:#FF5151">
+        <view class="c-tittlet">学习策略测评</view>
+        <view class="c-text-t">{{text0}}</view>
+      </view>
+      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:220rpx;background-color:#66B3FF">
+        <view class="c-tittlet">中学生学习动机测评</view>
+        <view class="c-text-t">{{text0}}</view>
+      </view>
+    </i-col>
+  </i-row>
+</view>
+
+
+<view style='width: 100%;  height: 200rpx' />

@@ -10,29 +10,47 @@
   <i-row>
     <i-col offset="1" span="22" i-class="col-class">
       <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:220rpx;background-color:#F7A490">
-        <view class="c-tittlet">做些测试吧</view>
-        <view class="c-text-t">{{text0}}</view></view>
+        <view class="c-tittlet">性格测评</view>
+        <view class="c-text-t">{{text0}}</view>
+      </view>
+      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:220rpx;background-color:#9393FF">
+        <view class="c-tittlet">职业兴趣测评</view>
+        <view class="c-text-t">{{text0}}</view>
+      </view>
+      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:220rpx;background-color:#66B3FF">
+        <view class="c-tittlet">优势学科</view>
+        <view class="c-text-t">{{text0}}</view>
+      </view>
 
-      <view bindtap="checkReport" class="quiz-intro-card card-color-0" style="margin-top:30rpx;height:88rpx;background-color:#4A90E2">
-        <view class="check-report-btn">做完测试后点击这里查看报告</view>
-      </view>
-      <view bindtap="toAllTest" class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:160rpx;background-color:#D3EAF9">
-        <view class="c-tittle">开始新高考测试</view>
-        <view class="c-text">{{text1}}</view></view>
-      <!-- <view bindtap="unnameFunction1" class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:160rpx;background-color:#D3EAF9">
-        <view class="c-tittle">测测你的性格</view>
-        <view class="c-text">{{text2}}</view></view>
-      <view bindtap="unnameFunction2" class="quiz-intro-card card-color-2" style="margin-top:22rpx;height:160rpx;background-color:#B4E9C4">
-        <view class="c-tittle">测测你的兴趣</view>
-        <view class="c-text">{{text3}}</view>
-      </view>
-      <view bindtap="unnameFunction3" class="quiz-intro-card card-color-3" style="margin-top:22rpx;height:160rpx;background-color:#FFCF78">
-        <view class="c-tittle">测测你的优势学科</view>
-        <view class="c-text">{{text4}}</view>
-      </view> -->
-      <view bindtap="unnameFunction4" class="quiz-intro-card" style="margin-top:22rpx;height:180rpx;background-color:#FFFFFF">
-        <view class="c-tittle">更多其它心理测评敬请期待</view>
-        <view class="c-text">一帆团队专业测评师正为您制定更多测评，精彩即将呈现~</view>
+
+
+
+      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:220rpx;background-color:#FFFFFF">
+        <!-- <view class="c-tittlet">点击开始测试</view> -->
+        <view slot="content">
+          <view class="container h-pannel-zone">
+              <view bindtap="toAllTest" class="flex-item in-center f-col">
+                  <view class="flex-item">
+                      <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+                  </view>
+                  <view class="flex-item small-font">开始测评</view>
+              </view>
+
+              <view bindtap="checkReport" class="flex-item in-center f-col">
+                  <view class="flex-item">
+                      <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+                  </view>
+                  <view class="flex-item small-font">测评结果</view>
+              </view>
+
+              <view bindtap="toMoreQuiz" class="flex-item in-center f-col">
+                  <view class="flex-item">
+                      <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
+                  </view>
+                  <view class="flex-item small-font">更多测评</view>
+              </view>
+          </view>
+        </view>
       </view>
     </i-col>
   </i-row>
