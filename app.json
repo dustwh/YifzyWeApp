@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/login/login",
+    "pages/homepage/homepage",
     "pages/moreQuiz/moreQuiz",
     "pages/quiz/quiz",
-    "pages/homepage/homepage",
     "pages/newCE/newCE",
-    "pages/login/login",
     "pages/infoInit/infoInit",
     "pages/login2/login2",
     "pages/pre/pre",

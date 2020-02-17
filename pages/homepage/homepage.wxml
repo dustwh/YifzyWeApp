@@ -4,8 +4,8 @@
 
 <!-- </view> -->
 <i-card title="{{name}}" extra="{{point}}" thumb="../../img/yifzyAvatar.png">
-    <view slot="content">{{school}} 新/科:{{subject}}  全省排名:{{rank}}</view>
-    <view slot="footer"><i-button bind:click="checkReport" inline="true" type="primary" shape="circle" size="small">ifquyu:小尺寸</i-button></view>
+    <view slot="content">{{school}} {{subject}}  全省排名:{{rank}}</view>
+    <view slot="footer"><i-button bind:click="checkReport" inline="true" type="primary" shape="circle" size="small">测评结果</i-button></view>
 </i-card>
 <view style='width: 100%;  height: 10rpx' />
 <i-card title="功能菜单">

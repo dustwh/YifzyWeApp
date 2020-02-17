@@ -10,7 +10,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     current: 'homepage',
     name:"萨达姆",
-    point:600,
+    point:652,
     school:"省实验中学",
     subject:"文科",
     rank:10000
@@ -63,39 +63,66 @@ Page({
     })
   },
   onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
+    var that = this
+    var sessionId = wx.getStorageSync("sessionId")
+    wx.request({
+      url: 'http://localhost:8080/weapp/HomePageInfoGet',
+      header: {
+        'content-type': 'application/json',
+        'Cookie': sessionId
+      },
+      success: function (res) {
+        console.log(res.data)
+        var name=res.data.name
+        var point=res.data.point
+        var schoolCode = res.data.schoolCode
+        var subject=res.data.subject
+        var school = app.globalData.highschoolDictionary[schoolCode]
+
+        that.setData({
+          name: name,
+          point: point,
+          school: school,
+          subject: subject,
+        });
+      },
+      fail:function(){
+        console.log("fail")
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
     })
+  //   if (app.globalData.userInfo) {
+  //     this.setData({
+  //       userInfo: app.globalData.userInfo,
+  //       hasUserInfo: true
+  //     })
+  //   } else if (this.data.canIUse){
+  //     // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+  //     // 所以此处加入 callback 以防止这种情况
+  //     app.userInfoReadyCallback = res => {
+  //       this.setData({
+  //         userInfo: res.userInfo,
+  //         hasUserInfo: true
+  //       })
+  //     }
+  //   } else {
+  //     // 在没有 open-type=getUserInfo 版本的兼容处理
+  //     wx.getUserInfo({
+  //       success: res => {
+  //         app.globalData.userInfo = res.userInfo
+  //         this.setData({
+  //           userInfo: res.userInfo,
+  //           hasUserInfo: true
+  //         })
+  //       }
+  //     })
+  //   }
+  // }
+  // getUserInfo: function(e) {
+  //   console.log(e)
+  //   app.globalData.userInfo = e.detail.userInfo
+  //   this.setData({
+  //     userInfo: e.detail.userInfo,
+  //     hasUserInfo: true
+  //   })
   }
 })
