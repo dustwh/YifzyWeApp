@@ -2,13 +2,13 @@
 <view class="page-body">
   <view class="page-section">
     <view class="header"> 
-      <i-input class="inputSearch" value="" class="weui-input" focus placeholder="搜索感兴趣的专业" inline="true" />
-      <i-button class="searchBtn" bind:click="handleClick" type="primary" left size="small" inline="true">搜索</i-button>
+      <!-- <i-input class="inputSearch" value="" class="weui-input" focus placeholder="搜索感兴趣的专业" inline="true" />
+      <i-button class="searchBtn" bind:click="handleClick" type="primary" left size="small" inline="true">搜索</i-button> -->
     </view>
     <view class="content"> 
       <i-tabs current="{{ current }}" bindchange="handleChange">
         <i-tab key="tab1" title="本科专业"></i-tab>
-        <i-tab key="tab2" title="专科专业"></i-tab>
+        <!-- <i-tab key="tab2" title="专科专业"></i-tab> -->
       </i-tabs>
     </view>
     <view class="caption-wrap">

@@ -1,7 +1,8 @@
 {
   "pages": [
-    "pages/login/login",
+    "pages/MajorRepo/MajorRepo",
     "pages/homepage/homepage",
+    "pages/login/login",
     "pages/moreQuiz/moreQuiz",
     "pages/quiz/quiz",
     "pages/newCE/newCE",
@@ -10,7 +11,6 @@
     "pages/pre/pre",
     "pages/mySchoolCollect/mySchoolCollect",
     "pages/mine/mine",
-    "pages/MajorRepo/MajorRepo",
     "pages/subInterest/subInterest",
     "pages/schoolChoose/schoolChoose",
     "pages/text/text",
@@ -21,7 +21,8 @@
     "pages/holTest/holTest",
     "pages/allTest/allTest",
     "pages/report/report",
-    "pages/universityRank/universityRank"
+    "pages/universityRank/universityRank",
+    "pages/news/news"
   ],
   "window": {
     "backgroundTextStyle": "light",

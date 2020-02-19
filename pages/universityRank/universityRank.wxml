@@ -1,2 +1,9 @@
 <!--pages/universityRank/universityRank.wxml-->
-<text>pages/universityRank/universityRank.wxml</text>
+<i-tabs current="{{ current }}" bindchange="handleChange">
+    <i-tab key="rank1" title="校友会"></i-tab>
+    <i-tab key="rank2" title="武书连"></i-tab>
+    <i-tab key="rank3" title="科软"></i-tab>
+    <i-tab key="rank4" title="排名4"></i-tab>
+    <i-tab key="rank5" title="排名5"></i-tab>
+</i-tabs>
+<image src="{{url}}"></image>

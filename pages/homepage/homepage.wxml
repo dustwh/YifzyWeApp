@@ -33,7 +33,7 @@
                 <view class="flex-item small-font">院校</view>
             </view>
 
-            <view class="flex-item in-center f-col">
+            <view bindtap="toMajorRepo" class="flex-item in-center f-col">
                 <view class="flex-item">
                     <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
                 </view>
@@ -78,21 +78,30 @@
 <view style='width: 100%;  height: 10rpx' />
 <i-card title="推荐院校">
 <view slot="content">
-    <!-- <view class="b-border" style="padding: 15px;">专业选择</view> -->
-    <view>清华大学</view>
-    <view>北京大学</view>
+    <view class="b-border" style="padding-left: 15px;">冲</view>
+    <view wx:for="{{optiRec}}">
+      {{index+1}} {{item}}
+    </view>
+    <view class="b-border" style="padding-left: 15px;">稳</view>
+    <view wx:for="{{normRec}}">
+      {{index+1}} {{item}}
+    </view>
+    <view class="b-border" style="padding-left: 15px;">保</view>
+    <view wx:for="{{pessRec}}">
+      {{index+1}} {{item}}
+    </view>
 </view>
 </i-card>
 <view style='width: 100%;  height: 10rpx' />
 <i-card title="关于专业，你必须了解">
 <view slot="content">
     <!-- <view class="b-border" style="padding: 15px;">专业选择</view> -->
-    <view>男生适合的专业</view>
-    <view>女生适合的专业</view>
-    <view>高薪专业</view>
-    <view>热门专业</view>
-    <view>热门专业</view>
-    <view>高薪专业</view>
+    <view bindtap="news">男生适合的专业</view>
+    <view bindtap="news">女生适合的专业</view>
+    <view bindtap="news">高薪专业</view>
+    <view bindtap="news">热门专业</view>
+    <view bindtap="news">热门专业</view>
+    <view bindtap="news">高薪专业</view>
 </view>
 </i-card>
 <view style='width: 100%;  height: 200rpx' />

@@ -13,7 +13,10 @@ Page({
     point:652,
     school:"省实验中学",
     subject:"文科",
-    rank:10000
+    rank:10000,
+    optiRec: {},
+    normRec: {},
+    pessRec:{}
   },
   //事件处理函数
   checkReport:function(){
@@ -37,6 +40,11 @@ Page({
       url: dest_url
     })
   },
+  news:function(){
+    wx.navigateTo({
+      url: '../news/news',
+    })
+  },
   toUniversityRank:function(){
     wx.navigateTo({
       url: '../universityRank/universityRank',
@@ -45,6 +53,11 @@ Page({
   toNewCE: function() {
     wx.navigateTo({
       url: '../newCE/newCE',
+    })
+  },
+  toMajorRepo:function(){
+    wx.navigateTo({
+      url: '../MajorRepo/MajorRepo',
     })
   },
   // test function
@@ -78,12 +91,17 @@ Page({
         var schoolCode = res.data.schoolCode
         var subject=res.data.subject
         var school = app.globalData.highschoolDictionary[schoolCode]
-
+        console.log(res.data.recSchoolOptimistic)
+        console.log(res.data.recSchoolNormal)
+        console.log(res.data.recSchoolPessimistic)
         that.setData({
           name: name,
           point: point,
           school: school,
           subject: subject,
+          optiRec:res.data.recSchoolOptimistic,
+          normRec:res.data.recSchoolNormal,
+          pessRec:res.data.recSchoolPessimistic
         });
       },
       fail:function(){

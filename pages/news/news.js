@@ -1,14 +1,11 @@
-// pages/universityRank/universityRank.js
+// pages/news/news.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    data: {
-      current: 'rank1',
-      url:""
-    },
+
   },
 
   /**
@@ -17,13 +14,7 @@ Page({
   onLoad: function (options) {
 
   },
-  handleChange({ detail }) {
-    console.log(detail.key)
-    this.setData({
-      current: detail.key,
-      url: "../../img/" + detail.key+".jpg"
-    });
-  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
