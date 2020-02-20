@@ -24,6 +24,13 @@ Page({
       url: '../report/report',
     })
   },
+  schoolInfo: function (event){
+    var school = event.currentTarget.dataset.schoolCode
+    console.log(school)
+    wx.showToast({
+      title: '展示学校信息'
+    })
+  },
   toQuiz:function(){
     wx.navigateTo({
       url: '../quiz/quiz',

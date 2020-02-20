@@ -80,15 +80,15 @@
 <view slot="content">
     <view class="b-border" style="padding-left: 15px;">冲</view>
     <view wx:for="{{optiRec}}">
-      {{index+1}} {{item}}
+      <view data-schoolCode="{{item}}" bindtap="schoolInfo">{{index+1}} {{item}}</view>
     </view>
     <view class="b-border" style="padding-left: 15px;">稳</view>
     <view wx:for="{{normRec}}">
-      {{index+1}} {{item}}
+      <view data-schoolCode="{{item}}" bindtap="schoolInfo">{{index+1}} {{item}}</view>
     </view>
     <view class="b-border" style="padding-left: 15px;">保</view>
     <view wx:for="{{pessRec}}">
-      {{index+1}} {{item}}
+      <view data-schoolCode="{{item}}" bindtap="schoolInfo">{{index+1}} {{item}}</view>
     </view>
 </view>
 </i-card>

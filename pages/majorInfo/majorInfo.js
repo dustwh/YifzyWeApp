@@ -1,4 +1,4 @@
-// pages/login/login.js
+// pages/majorInfo/majorInfo.js
 Page({
 
   /**
@@ -11,12 +11,6 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  handleClick:function(){
-
-  },
-  getPhoneNumber:function(e){
-    console.log(e)
-  },
   onLoad: function (options) {
 
   },

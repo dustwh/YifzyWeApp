@@ -1,3 +1,0 @@
-<!--pages/login/login.wxml-->
-<i-button bind:click="handleClick">默认按钮</i-button>
-<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">get</button>

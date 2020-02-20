@@ -1,9 +1,0 @@
-{
-  "navigationBarTitleText": "登录到一帆志愿",
-  "usingComponents": {
-    "i-card": "../../dist/card/index",
-    "i-input": "../../dist/input/index",
-    "i-message": "../../dist/message/index",
-    "i-modal": "../../dist/modal/index"
-  }
-}

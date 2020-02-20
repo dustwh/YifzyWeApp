@@ -1,14 +1,12 @@
 {
   "pages": [
-    "pages/MajorRepo/MajorRepo",
-    "pages/homepage/homepage",
     "pages/login/login",
+    "pages/homepage/homepage",
+    "pages/MajorRepo/MajorRepo",
     "pages/moreQuiz/moreQuiz",
     "pages/quiz/quiz",
     "pages/newCE/newCE",
     "pages/infoInit/infoInit",
-    "pages/login2/login2",
-    "pages/pre/pre",
     "pages/mySchoolCollect/mySchoolCollect",
     "pages/mine/mine",
     "pages/subInterest/subInterest",
@@ -22,7 +20,8 @@
     "pages/allTest/allTest",
     "pages/report/report",
     "pages/universityRank/universityRank",
-    "pages/news/news"
+    "pages/news/news",
+    "pages/majorInfo/majorInfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
