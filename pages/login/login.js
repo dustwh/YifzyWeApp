@@ -42,6 +42,16 @@ Page({
       }
     )
   },
+  toDemo1:function(){
+    wx.navigateTo({
+      url: '../demo1/demo1'
+    })
+  },
+  toDemo2: function () {
+    wx.navigateTo({
+      url: '../demo2/demo2'
+    })
+  },
   onLoad: function() {
     var  phone = wx.getStorageSync('phone');
     if (app.globalData.userInfo) {

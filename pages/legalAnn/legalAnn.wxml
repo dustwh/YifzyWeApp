@@ -1,0 +1,13 @@
+<!--pages/legalAnn/legalAnn.wxml-->
+<view class="whole">
+  <view style='width: 100%;  height: 25rpx' />
+  <i-card title="免责声明" extra="">
+      <view slot="content">
+        免责声明免责声明免责声明免责声明免责声明免责声明免责声明免责声明免责声明免责声明免责声明
+      </view>
+  </i-card>
+    <view style='width: 100%;  height: 25rpx' />
+  <view class="in-center center">
+    <view bindtap="toBack" class="center flex-item roundFakeBtn"><i-icon type="undo" size="38" color="#80848f" /></view>
+  </view>
+</view>

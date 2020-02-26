@@ -1,2 +1,196 @@
 <!--pages/report/report.wxml-->
-<text>pages/report/report.wxml</text>
+<view style="margin-left:30rpx;margin-right:30rpx">
+  <i-panel title="性格分析">
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="4" i-class="col-class">完美</i-col>
+		    <i-col span="20" i-class="col-class"><i-progress percent="{{enn1}}" status="active"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+  <i-panel>
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="4" i-class="col-class">助人</i-col>
+		    <i-col span="20" i-class="col-class"><i-progress percent="{{enn2}}" status="active"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+  <i-panel>
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="4" i-class="col-class">成就</i-col>
+		    <i-col span="20" i-class="col-class"><i-progress percent="{{enn3}}" status="active"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+  <i-panel>
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="4" i-class="col-class">情绪</i-col>
+		    <i-col span="20" i-class="col-class"><i-progress percent="{{enn4}}" status="active"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+  <i-panel>
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="4" i-class="col-class">智慧</i-col>
+		    <i-col span="20" i-class="col-class"><i-progress percent="{{enn5}}" status="active"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+	<i-panel>
+	  <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+	  	<i-row>
+		    <i-col span="4" i-class="col-class">忠诚</i-col>
+		    <i-col span="20" i-class="col-class"><i-progress percent="{{enn6}}" status="active"></i-progress></i-col>
+		</i-row>
+	  </view>
+	</i-panel>
+  <i-panel>
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="4" i-class="col-class">活跃</i-col>
+		    <i-col span="20" i-class="col-class"><i-progress percent="{{enn7}}" status="active"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+  <i-panel>
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="4" i-class="col-class">领袖</i-col>
+		    <i-col span="20" i-class="col-class"><i-progress percent="{{enn8}}" status="active"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+  <i-panel>
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="4" i-class="col-class">和平</i-col>
+		    <i-col span="20" i-class="col-class"><i-progress percent="{{enn9}}" status="active"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+
+  <i-panel title="职业兴趣">
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="6" i-class="col-class">C 常规型</i-col>
+		    <i-col span="18" i-class="col-class"><i-progress percent="{{hol0}}" status="wrong"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+  <i-panel>
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="6" i-class="col-class">R 现实型</i-col>
+		    <i-col span="18" i-class="col-class"><i-progress percent="{{hol1}}" status="wrong"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+  <i-panel>
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="6" i-class="col-class">I 研究型</i-col>
+		    <i-col span="18" i-class="col-class"><i-progress percent="{{hol2}}" status="wrong"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+  <i-panel>
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="6" i-class="col-class">E 管理型</i-col>
+		    <i-col span="18" i-class="col-class"><i-progress percent="{{hol3}}" status="wrong"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+  <i-panel>
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="6" i-class="col-class">S 社会型</i-col>
+		    <i-col span="18" i-class="col-class"><i-progress percent="{{hol4}}" status="wrong"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+	<i-panel>
+	  <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+	  	<i-row>
+		    <i-col span="6" i-class="col-class">A 艺术型</i-col>
+		    <i-col span="18" i-class="col-class"><i-progress percent="{{hol5}}" status="wrong"></i-progress></i-col>
+		</i-row>
+	  </view>
+	</i-panel>
+
+    <i-panel title="八大智能">
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="6" i-class="col-class">语言表达</i-col>
+		    <i-col span="18" i-class="col-class"><i-progress percent="{{itl0}}" status="success"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+  <i-panel>
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="6" i-class="col-class">数学逻辑</i-col>
+		    <i-col span="18" i-class="col-class"><i-progress percent="{{itl1}}" status="success"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+  <i-panel>
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="6" i-class="col-class">空间立体</i-col>
+		    <i-col span="18" i-class="col-class"><i-progress percent="{{itl2}}" status="success"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+  <i-panel>
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="6" i-class="col-class">身体运动</i-col>
+		    <i-col span="18" i-class="col-class"><i-progress percent="{{itl3}}" status="success"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+  <i-panel>
+      <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+      	<i-row>
+		    <i-col span="6" i-class="col-class">音乐旋律</i-col>
+		    <i-col span="18" i-class="col-class"><i-progress percent="{{itl4}}" status="success"></i-progress></i-col>
+		</i-row>
+      </view>
+  </i-panel>
+	<i-panel>
+	  <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+	  	<i-row>
+		    <i-col span="6" i-class="col-class">人际关系</i-col>
+		    <i-col span="18" i-class="col-class"><i-progress percent="{{itl5}}" status="success"></i-progress></i-col>
+		</i-row>
+	  </view>
+	</i-panel>
+	<i-panel>
+	  <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+	  	<i-row>
+		    <i-col span="6" i-class="col-class">自我认知</i-col>
+		    <i-col span="18" i-class="col-class"><i-progress percent="{{itl6}}" status="success"></i-progress></i-col>
+		</i-row>
+	  </view>
+	</i-panel>
+	<i-panel>
+	  <view style="padding-left: 10px;padding-right: 5px;padding-top: 10px;padding-bottom:10px">
+	  	<i-row>
+		    <i-col span="6" i-class="col-class">自然认知</i-col>
+		    <i-col span="18" i-class="col-class"><i-progress percent="{{itl7}}" status="success"></i-progress></i-col>
+		</i-row>
+	  </view>
+	</i-panel>
+  <view class="container f-row">
+    <view wx:for="{{majorRecList}}">
+      <view bindtap="majorInfo">{{index+1}} {{item}}</view>
+    </view>
+  </view>
+</view>
+<view style='width: 100%;  height: 25rpx' />
+<button bindtap="nBack" type="primary">返回</button>

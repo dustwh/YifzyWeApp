@@ -1,22 +1,11 @@
-// pages/mine/mine.js
+// pages/about/yifzy/yifzy.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    current: 'mine'
-  },
-  handleChange({ detail }) {
-    this.setData({
-      current: detail.key
-    });
-    var dest_page = detail.key
-    var dest_url = '../' + dest_page + '/' + dest_page
-    console.log(dest_url)
-    wx.redirectTo({
-      url: dest_url
-    })
+
   },
 
   /**
@@ -26,8 +15,8 @@ Page({
 
   },
 
-  show_wc:function(){
-    
+  toBack:function(){
+    wx.navigateBack();
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

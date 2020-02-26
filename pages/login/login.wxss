@@ -1,0 +1,45 @@
+.container{
+  background-image: url("http://localhost:8080/img/system/loginBG.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* display: flex; */
+  justify-content: center;
+  flex-direction: column;  
+  align-items: center
+}
+
+.userinfo {
+  /* position: relative;   */
+  /* width: 750rpx;  
+  height: 320rpx;   */
+  color: grey;  
+}  
+.bfont{
+  font-weight:700
+}
+.userinfo-avatar {  
+  overflow:hidden;  
+  display: block;  
+  width: 160rpx;  
+  height: 160rpx;  
+  margin: 20rpx;  
+  margin-top: 50rpx;  
+  border-radius: 50%;  
+  border: 2px solid #fff;  
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
+}
+.p-btn{
+  color: #6e3eb6;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #6e3eb6;
+  background: transparent
+}
+.p-btn:hover{
+  background: #7c47ccb0
+}
+.label-text{
+  font-weight:700;
+  font-size: 28rpx;
+  color: rgb(83, 48, 134)
+}

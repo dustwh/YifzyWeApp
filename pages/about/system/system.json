@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "i-alert": "../../dist/alert/index",
+    "i-load-more": "../../dist/load-more/index"
+  }
+}

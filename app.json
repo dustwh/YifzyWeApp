@@ -1,14 +1,17 @@
 {
   "pages": [
     "pages/login/login",
+    "pages/report/report",
+    "pages/mine/mine",
+    "pages/infoInit/infoInit",
     "pages/homepage/homepage",
+    "pages/about/business/business",
+    "pages/about/yifzy/yifzy",
     "pages/MajorRepo/MajorRepo",
     "pages/moreQuiz/moreQuiz",
     "pages/quiz/quiz",
     "pages/newCE/newCE",
-    "pages/infoInit/infoInit",
     "pages/mySchoolCollect/mySchoolCollect",
-    "pages/mine/mine",
     "pages/subInterest/subInterest",
     "pages/schoolChoose/schoolChoose",
     "pages/text/text",
@@ -18,16 +21,18 @@
     "pages/ennTest/ennTest",
     "pages/holTest/holTest",
     "pages/allTest/allTest",
-    "pages/report/report",
     "pages/universityRank/universityRank",
     "pages/news/news",
-    "pages/majorInfo/majorInfo"
+    "pages/majorInfo/majorInfo",
+    "pages/about/system/system",
+    "pages/legalAnn/legalAnn",
+    "pages/tb/tb"
   ],
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#46A3FF",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#6e3eb6",
+    "navigationBarTitleText": "一帆志愿",
+    "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json"
 }

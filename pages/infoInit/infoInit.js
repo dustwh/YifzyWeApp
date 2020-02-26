@@ -61,6 +61,7 @@ Page({
     })
   },
   bindRegionChange: function (e) {
+    console.log(e.detail.code)
     var districCode = e.detail.code[2]
     var schoolCodesArray = app.globalData.highschoolIndex[districCode]
     var schoolNamesArray = [
@@ -161,11 +162,82 @@ Page({
     // end of confirm    
   },
   onLoad: function () {
+    var that = this
     var phone = wx.getStorageSync("phone")
+    var sessionId = wx.getStorageSync("sessionId")
     this.setData({
       tel: phone
     });
-    console.log("拉取数据")
+    wx.request({
+      url: "http://localhost:8080/weapp/infoInitGetInfo",
+      method: "POST",
+      header: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        'Cookie': sessionId
+      },
+      success: function (res) {
+        if (res.statusCode == '200') {
+          console.log("info 200")
+          var point = res.data.point;
+          var year = res.data.year;
+          var subjectCode = res.data.subjectCode;
+          var provinceCode = res.data.provinceCode;
+          var cityCode = res.data.cityCode;
+          var districtCode = res.data.districtCode;
+          var stuHighschoolCode = res.data.stuHighschoolCode;
+          console.log(point)
+          console.log(year)
+          console.log(subjectCode)
+          console.log(provinceCode)
+          console.log(cityCode)
+          console.log(districtCode)
+          console.log(stuHighschoolCode)
+          var subIndexCode = subjectCode
+          if (subIndexCode==5){
+            subIndexCode=2
+          }
+          if (!(point == null)){
+            console.log("ok point")
+            that.setData({
+              mark:point
+            })
+          }
+          if (!(year == null)) {
+            if((year<2020)&&(year>=2017)){
+              that.setData({
+                gradeIndex: 2020 - year
+              })
+            }
+            if(year==2017){
+              that.setData({
+                showSub:true,
+              })
+              if (subIndexCode == 2 || subIndexCode==5){
+                that.setData({
+                  subIndex: subIndexCode
+                })
+              }
+            }
+          }
+          // 省 市 区
+          // don't know how to do
+          // that.setData({
+          //   regionCode:[provinceCode,cityCode,districtCode]
+          // })
+          // that.setData({
+          //   isSetPlace:true
+          // })
+        } else {
+          console.log("网络似乎出小差，请检查wifi或流量")
+          console.log("服务器错误获");
+          console.log("取个人信息失败，请重新进入小程序");
+          // $Message({
+          //   content: '与服务器通讯失败',
+          //   type: 'error'
+          // });
+        }
+      },
+    })
   },
 
   /**

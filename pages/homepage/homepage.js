@@ -9,11 +9,12 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     current: 'homepage',
-    name:"萨达姆",
+    name:"name",
     point:652,
     school:"省实验中学",
-    subject:"文科",
-    rank:10000,
+    subject:"科目",
+    rankTitle:"",
+    rank:"",
     optiRec: {},
     normRec: {},
     pessRec:{}
@@ -51,6 +52,11 @@ Page({
     wx.navigateTo({
       url: '../news/news',
     })
+  },
+  totb:function(){
+    wx.navigateTo({
+      url:'../tb/tb'
+    });
   },
   toUniversityRank:function(){
     wx.navigateTo({
@@ -97,6 +103,7 @@ Page({
         var point=res.data.point
         var schoolCode = res.data.schoolCode
         var subject=res.data.subject
+        var subjectCode = res.data.subjectCode
         var school = app.globalData.highschoolDictionary[schoolCode]
         console.log(res.data.recSchoolOptimistic)
         console.log(res.data.recSchoolNormal)
@@ -110,6 +117,40 @@ Page({
           normRec:res.data.recSchoolNormal,
           pessRec:res.data.recSchoolPessimistic
         });
+
+        if (!(subject=="新高考")){
+          console.log("2017")
+          var getRankFromTeacher=-1
+          wx.request({
+            url: 'https://www.yifzy.com/teacher/fenduan/byfs',
+            method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+            data: {
+              'nf': 2019,
+              'pr': 210000,
+              'fs': point,
+              'kl': subjectCode
+            },
+            header: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            }, // 设置请求的 header
+            success: function (res) {
+              if (res.statusCode == '200') {
+                console.log(res.data.result.wc)
+                that.setData({
+                  rankTitle: " / 全省排名:",
+                  rank: res.data.result.wc
+                });
+              } else {
+                console.log(statusCode)
+              }
+            },
+            fail: function (err) {
+              console.log(err);
+            }
+          })
+        }else{
+          console.log("xin")
+        }
       },
       fail:function(){
         console.log("fail")

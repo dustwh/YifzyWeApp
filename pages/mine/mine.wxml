@@ -1,36 +1,68 @@
 <!--pages/mine/mine.wxml-->
+<view style='width: 100%;  height: 40rpx' />
+ 个人信息
+<i-panel>
+<view>
+</view>
+<i-cell title="联系电话"><input class="weui-input" value="{{ tel }}" type="number" title="联系电话" bindinput="bindKeyInput1" placeholder="请输入手机号" /></i-cell>
+<!-- <i-cell title="学生姓名"><input class="weui-input" value="{{ value1 }}" type="textarea" title="学生姓名" bindinput="bindKeyInput2" autofocus placeholder="名字" /></i-cell> -->
+<i-cell title="分数"><input class="weui-input" value="{{ mark }}" type="textarea" title="学生姓名" bindinput="bindKeyInput2" autofocus placeholder="分数" /></i-cell>
+
+<i-cell title="年级">
+<!-- <input class="weui-input" value="{{ value3 }}" type="textarea" title="所在地" bindinput="bindKeyInput3" placeholder="省/市/区/学校" maxlength="50" /> -->
+  <picker bindchange="bindPickerChange" value="{{gradeIndex}}" range="{{grade}}">
+    <view class="picker">
+      当前选择：{{grade[gradeIndex]}}
+    </view>
+  </picker>
+</i-cell>
+<i-cell title="文理" wx:if="{{showSub}}">
+  <picker bindchange="bindSubChange" value="{{subIndex}}" range="{{subArray}}">
+    <view class="picker">
+      当前选择：{{subArray[subIndex]}}
+    </view>
+  </picker>
+</i-cell>
+<i-cell title="在哪上学">
+  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+    <view class="picker">
+      点击修改：{{region[0]}}，{{region[1]}}，{{region[2]}}
+    </view>
+  </picker>
+</i-cell>
+<i-cell title="选择学校" wx:if="{{isSetPlace}}">
+  <!-- <input class="weui-input" value="{{ school }}" type="textarea" title="学校" bindinput="bindKeyInput3" placeholder="学校"/> -->
+  <picker bindchange="bindSchoolChange" value="{{schoolIndex}}" range="{{schoolArray}}" range-key="{{'name'}}">
+    <view class="picker">
+      当前选择：{{schoolArray[schoolIndex].name}}
+    </view>
+  </picker>
+
+</i-cell>
+</i-panel>
+<view style='width: 100%;  height: 20rpx' />
+<i-button bind:click="confirm" type="primary">确认信息</i-button>
+
+<view style='width: 100%;  height: 40rpx' />
+ 指导信息
 <i-cell-group>
-    <i-cell title="姓名" is-link url="../quiz/quiz">
-      <i-icon slot="icon" type="activity_fill" />
-    </i-cell>
-    <i-cell title="学校" is-link url="../about/about">
-      <i-icon slot="icon" type="interactive_fill" />
-    </i-cell>
-    <i-cell title="总分" is-link url="../quiz/quiz">
-      <i-icon slot="icon" type="task_fill" />
-    </i-cell>
-    <i-cell title="位次" is-link url="../quiz/quiz">
-      <i-icon slot="icon" type="brush_fill" />
-    </i-cell>
-    <i-cell title="年级" is-link url="../subRecMaj/subRecMaj">
-      <i-icon slot="icon" type="searchfill" />
-    </i-cell>
-    <i-cell title="各科分数" is-link url="../quiz/quiz">
-      <i-icon slot="icon" type="task_fill" />
-    </i-cell>
     <i-cell title="我的院校" is-link url="../quiz/quiz">
       <i-icon slot="icon" type="task_fill" />
     </i-cell>
     <i-cell title="我的专业" is-link url="../quiz/quiz">
       <i-icon slot="icon" type="task_fill" />
     </i-cell>
-    <i-cell title="商务合作" is-link url="../about/about">
+</i-cell-group>
+<view style='width: 100%;  height: 40rpx' />
+ About
+<i-cell-group>
+    <i-cell title="商务合作" is-link url="../about/business/business">
       <i-icon slot="icon" type="interactive_fill" />
     </i-cell>
-    <i-cell title="关于一帆志愿" is-link url="../about/about">
+    <i-cell title='关于“一帆志愿”' is-link url="../about/yifzy/yifzy">
       <i-icon slot="icon" type="interactive_fill" />
     </i-cell>
-    <i-cell title="系统" is-link url="../about/about">
+    <i-cell title='关于本系统' is-link url="../about/system/system">
       <i-icon slot="icon" type="interactive_fill" />
     </i-cell>
 </i-cell-group>

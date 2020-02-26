@@ -1,11 +1,22 @@
-<!--index.wxml-->
-<!-- <view class="home-banner"> -->
-<!-- <image src="../../img/hp.png" mode="widthFix" style="width:96%;"></image> -->
+<i-card>
 
-<!-- </view> -->
-<i-card title="{{name}}" extra="{{point}}" thumb="../../img/yifzyAvatar.png">
-    <view slot="content">{{school}} {{subject}}  全省排名:{{rank}}</view>
-    <view slot="footer"><i-button bind:click="checkReport" inline="true" type="primary" shape="circle" size="small">测评结果</i-button></view>
+    <view slot="content">
+      <view class="userinfo">
+        <view bindtap="totb" class="userinfo-avatar">
+          <open-data  type="userAvatarUrl"></open-data>
+        </view>
+        {{name}} {{school}}
+      </view>
+      
+      <view class="userinfo" style="margin-top:15rpx">
+        {{subject}} / {{point}}  {{rankTitle}}{{rank}}
+      </view>
+      <view class="userinfo">
+        <i-alert inline="true" bindtap="checkReport" type="success" show-icon>
+          查看报告
+        </i-alert>
+      </view>
+    </view>
 </i-card>
 <view style='width: 100%;  height: 10rpx' />
 <i-card title="功能菜单">

@@ -1,34 +1,24 @@
-// pages/mine/mine.js
+// pages/legalAnn/legalAnn.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    current: 'mine'
-  },
-  handleChange({ detail }) {
-    this.setData({
-      current: detail.key
-    });
-    var dest_page = detail.key
-    var dest_url = '../' + dest_page + '/' + dest_page
-    console.log(dest_url)
-    wx.redirectTo({
-      url: dest_url
-    })
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
+  toBack:function(){
+    wx.navigateBack()
+  },
+  
   onLoad: function (options) {
 
   },
 
-  show_wc:function(){
-    
-  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

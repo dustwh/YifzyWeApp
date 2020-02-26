@@ -1,0 +1,13 @@
+<!--pages/about/yifzy/yifzy.wxml-->
+<view class="whole">
+  <view style='width: 100%;  height: 25rpx' />
+  <i-card title="一帆志愿" extra="大数据填报" thumb="../../img/icon.png">
+      <view slot="content">
+      一帆志愿大数据智能填报平台于2010年诞生在东北大学孵化中心，研发团队由多名东北大学博士、硕士组成，经过四年数据整理研发，形成了一套基于职业测评，状态激励，高考填考的全流程服务体系，一站式解决了高中生“报”与“考”的问题。同时经过多年成熟运营，已经为辽宁省上万名考生提供了精准服务，广泛获得考生及家长的一致好评。</view>
+      <view slot="footer">本软件已经申请国家专利并获得软件著作权，盗版必究</view>
+  </i-card>
+    <view style='width: 100%;  height: 25rpx' />
+  <view class="in-center center">
+    <view bindtap="toBack" class="center flex-item roundFakeBtn"><i-icon type="undo" size="38" color="#80848f" /></view>
+  </view>
+</view>

@@ -2,6 +2,9 @@
 page {
     background-color: #f5f5f5;
 }
+.i-card-header{
+  display: none
+}
 .home-banner{
   padding-top: 30rpx;
   padding-bottom: 30rpx;
@@ -17,3 +20,32 @@ page {
 .small-font{
   font-size: 28rpx
 }
+
+.userinfo {
+  /* position: relative;   */
+  /* width: 750rpx;  
+  height: 320rpx;   */
+  color: grey;  
+  display: flex;  
+  flex-direction: column;  
+  align-items: center;  
+}  
+
+.userinfo-avatar {  
+  overflow:hidden;  
+  display: block;  
+  width: 160rpx;  
+  height: 160rpx;  
+  margin: 20rpx;  
+  margin-top: 50rpx;  
+  border-radius: 50%;  
+  border: 2px solid #fff;  
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
+}  
+
+/* .userinfo{  
+  color: #fff;  
+  font-size: 14px;  
+  background-color: #c0c0c0;  
+  border-radius:40%;  
+} */
