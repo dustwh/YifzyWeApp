@@ -1,10 +1,10 @@
 {
   "pages": [
+    "pages/mine/mine",
+    "pages/homepage/homepage",
     "pages/login/login",
     "pages/report/report",
-    "pages/mine/mine",
     "pages/infoInit/infoInit",
-    "pages/homepage/homepage",
     "pages/about/business/business",
     "pages/about/yifzy/yifzy",
     "pages/MajorRepo/MajorRepo",

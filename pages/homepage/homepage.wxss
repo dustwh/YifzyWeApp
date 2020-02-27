@@ -1,36 +1,61 @@
 /**index.wxss**/
 page {
-    background-color: #f5f5f5;
+    background-color: #eeeeee;
+    /* background-color: #6e3eb6; */
 }
-.i-card-header{
-  display: none
+.fbtn{
+  background-color: #fdeca6;
+  padding: 14rpx 28rpx 14rpx 28rpx;
+  font-weight: 500;
+  color: #614291;
+  margin-top: 14rpx;
+  margin-left: 35%;
+  margin-right: 35%;
+  border-radius: 14rpx;
+  letter-spacing: 3rpx
 }
-.home-banner{
-  padding-top: 30rpx;
-  padding-bottom: 30rpx;
-  padding-left: 4%;
+.homepagePCardHead{
+  background-image: url("http://localhost:8080/img/system/PIBG.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 22rpx 32rpx 0 32rpx;
+  padding: 24rpx;
+  /* border-style: solid;
+  border-width: 1rpx;*/
+  border-radius: 16rpx; 
+  /* border-color: #7952b3; */
 }
-.b-border{
-  border-bottom: solid 1px #f5f5f5;
+.homepagePCardHead:hover{
+  box-shadow: 0 0 0 3px rgba(121,82,179,.25);
+  transition-duration: 0.2s
 }
+.rec-card{
+  background: white;
+  margin: 22rpx 32rpx 0 32rpx;
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+  border-radius: 16rpx;
+}
+
 .h-pannel-zone{
   padding-top: 30rpx;
   padding-bottom: 30rpx;
 }
 .small-font{
-  font-size: 28rpx
+  color: #644594;
+  margin-top: 10rpx;
+  font-size: 28rpx;
+  letter-spacing: 3rpx
 }
-
 .userinfo {
   /* position: relative;   */
   /* width: 750rpx;  
   height: 320rpx;   */
-  color: grey;  
-  display: flex;  
-  flex-direction: column;  
-  align-items: center;  
+  color: grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }  
-
 .userinfo-avatar {  
   overflow:hidden;  
   display: block;  
@@ -39,13 +64,6 @@ page {
   margin: 20rpx;  
   margin-top: 50rpx;  
   border-radius: 50%;  
-  border: 2px solid #fff;  
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);  
+  border: 2px solid #7952b3;  
+  box-shadow: 3px 3px 10px rgba(121,82,179,.25)
 }  
-
-/* .userinfo{  
-  color: #fff;  
-  font-size: 14px;  
-  background-color: #c0c0c0;  
-  border-radius:40%;  
-} */

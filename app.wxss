@@ -25,3 +25,26 @@
   background-color:#F7534F;
   color: white
 }
+.homepagePCard{
+  background: white;
+  margin: 22rpx 32rpx 0 32rpx;
+  padding: 24rpx;
+  /* border-style: solid;
+  border-width: 1rpx;*/
+  border-radius: 16rpx; 
+  /* border-color: #7952b3; */
+}
+.homepagePCard:hover{
+  box-shadow: 0 0 0 3px rgba(121,82,179,.25);
+  transition-duration: 0.2s
+}
+.p-btn{
+  color: #6e3eb6;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #6e3eb6;
+  background: transparent
+}
+.p-btn:hover{
+  background: #7c47ccb0
+}

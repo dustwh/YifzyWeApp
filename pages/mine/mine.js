@@ -7,6 +7,11 @@ Page({
   data: {
     current: 'mine'
   },
+  confirm:function(){
+    wx.navigateTo({
+      url:"../login/login"
+    })
+  },
   handleChange({ detail }) {
     this.setData({
       current: detail.key

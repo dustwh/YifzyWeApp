@@ -5,6 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    testName1: "性格测评",
+    testName2: "职业兴趣测评",
+    testName3:"优势学科",
     current: 'quiz',
     text0: '自知者明：职业规划和性格测试是人生中应该持续进行的自我了解的过程，一帆在此为您提供一套拥有独立IP且真正行之有效的测试。',
     text1: '独家智能综合测试题，扬长避短锁定自身优劣势',
@@ -52,33 +55,33 @@ Page({
     })
   },
   onLoad: function (options) {
-    var that = this
-    wx.request({
-      url: "http://localhost:8080/wxget_is_si",
-      method: "POST",
-      data: {
-        tel: wx.getStorageSync("tel")
-      },
-      header: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      },
-      success: function (res) {
-        if (res.statusCode == '200') {
-          console.log(res.data)
-          if (res.data == "1") {
-            that.setData({
-              text4:"做答完毕，点击查看结果"
-            })
-          }
-        } else {
-          console.log("通讯失败")
-          // $Message({
-          //   content: '与服务器通讯失败',
-          //   type: 'error'
-          // });
-        }
-      },
-    })
+    // var that = this
+    // wx.request({
+    //   url: "http://localhost:8080/wxget_is_si",
+    //   method: "POST",
+    //   data: {
+    //     tel: wx.getStorageSync("tel")
+    //   },
+    //   header: {
+    //     "Content-Type": "application/x-www-form-urlencoded"
+    //   },
+    //   success: function (res) {
+    //     if (res.statusCode == '200') {
+    //       console.log(res.data)
+    //       if (res.data == "1") {
+    //         that.setData({
+    //           text4:"做答完毕，点击查看结果"
+    //         })
+    //       }
+    //     } else {
+    //       console.log("通讯失败")
+    //       // $Message({
+    //       //   content: '与服务器通讯失败',
+    //       //   type: 'error'
+    //       // });
+    //     }
+    //   },
+    // })
   },
 
   /**

@@ -11,7 +11,7 @@ Page({
     current: 'homepage',
     name:"name",
     point:652,
-    school:"省实验中学",
+    school:"未登录无法显示",
     subject:"科目",
     rankTitle:"",
     rank:"",
@@ -53,9 +53,9 @@ Page({
       url: '../news/news',
     })
   },
-  totb:function(){
+  toMine:function(){
     wx.navigateTo({
-      url:'../tb/tb'
+      url:'../mine/mine'
     });
   },
   toUniversityRank:function(){
@@ -105,9 +105,12 @@ Page({
         var subject=res.data.subject
         var subjectCode = res.data.subjectCode
         var school = app.globalData.highschoolDictionary[schoolCode]
-        console.log(res.data.recSchoolOptimistic)
-        console.log(res.data.recSchoolNormal)
-        console.log(res.data.recSchoolPessimistic)
+        console.log("here to check rec school list")
+        // console.log(res.data.recSchoolOptimistic)
+        // console.log(res.data.recSchoolNormal)
+        // console.log(res.data.recSchoolPessimistic)
+        // console.log(schoolCode)
+        // console.log(school)
         that.setData({
           name: name,
           point: point,

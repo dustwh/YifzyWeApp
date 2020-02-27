@@ -5,7 +5,7 @@
     <open-data type="userAvatarUrl"></open-data>
   </view>
 </view>
-<view style="margin-top:38rpx">
+<view style="margin-top:54rpx">
   <open-data class="bfont" type="userNickName"></open-data>
 </view>
 <view style='width: 100%;  height: 130rpx' />
@@ -14,6 +14,4 @@
   <button class="p-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> 授权登录</button>
   <view style='width: 100%;  height: 15rpx' />
   <li class="label-text">新用户登录将为您自动注册</li>
-  <!-- <view style='width: 100%;  height: 150rpx' />
-  <button bindtap="checkLogin">asdsad</button> -->
 </view>

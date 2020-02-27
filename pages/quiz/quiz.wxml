@@ -10,7 +10,7 @@
   <i-row>
     <i-col offset="1" span="22" i-class="col-class">
       <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:220rpx;background-color:#F7A490">
-        <view class="c-tittlet">性格测评</view>
+        <view class="c-tittlet">{{testName1}}</view>
         <view class="c-text-t">{{text0}}</view>
       </view>
       <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:220rpx;background-color:#9393FF">
@@ -21,46 +21,40 @@
         <view class="c-tittlet">优势学科</view>
         <view class="c-text-t">{{text0}}</view>
       </view>
-
-
-
-
-      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:220rpx;background-color:#FFFFFF">
-        <!-- <view class="c-tittlet">点击开始测试</view> -->
-        <view slot="content">
-          <view class="container h-pannel-zone">
-              <view bindtap="toAllTest" class="flex-item in-center f-col">
-                  <view class="flex-item">
-                      <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
-                  </view>
-                  <view class="flex-item small-font">开始测评</view>
-              </view>
-
-              <view bindtap="checkReport" class="flex-item in-center f-col">
-                  <view class="flex-item">
-                      <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
-                  </view>
-                  <view class="flex-item small-font">测评结果</view>
-              </view>
-
-              <view bindtap="toMoreQuiz" class="flex-item in-center f-col">
-                  <view class="flex-item">
-                      <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image>
-                  </view>
-                  <view class="flex-item small-font">更多测评</view>
-              </view>
-          </view>
-        </view>
-      </view>
     </i-col>
   </i-row>
+<!-- 卡片 -->
+  <view class="homepagePCard">
+    <view class="container h-pannel-zone">
+      <view bindtap="toAllTest" class="flex-item in-center f-col">
+          <view class="flex-item">
+              <!-- <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image> -->
+              <i-icon type="brush" size="32" color="#644594" />
+          </view>
+          <view class="flex-item small-font">开始测评</view>
+      </view>
+
+      <view bindtap="checkReport" class="flex-item in-center f-col">
+          <view class="flex-item">
+              <i-icon type="activity" size="32" color="#644594" />
+          </view>
+          <view class="flex-item small-font">测评报告</view>
+      </view>
+
+      <view bindtap="toMoreQuiz" class="flex-item in-center f-col">
+          <view class="flex-item">
+              <i-icon type="more" size="32" color="#644594" />
+          </view>
+          <view class="flex-item small-font">更多测评</view>
+      </view>
+    </view>
+  </view>
 </view>
 
 
-<view style='width: 100%;  height: 200rpx' />
 
 
-<i-tab-bar current="{{ current }}" color="#F7534F" bindchange="handleChange" fixed="true">
+<i-tab-bar current="{{ current }}" color="#7952b3" bindchange="handleChange" fixed="true">
     <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
     <i-tab-bar-item key="quiz" icon="remind" current-icon="remind_fill" title="测评"></i-tab-bar-item>
     <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>

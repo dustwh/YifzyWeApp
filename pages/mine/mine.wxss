@@ -1,1 +1,7 @@
 /* pages/mine/mine.wxss */
+page{
+      background-color: #eeeeee;
+    background-image: url("http://localhost:8080/img/system/homePageBG.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}

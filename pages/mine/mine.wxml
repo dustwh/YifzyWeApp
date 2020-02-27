@@ -1,48 +1,12 @@
 <!--pages/mine/mine.wxml-->
 <view style='width: 100%;  height: 40rpx' />
- 个人信息
-<i-panel>
-<view>
+  <view class="homepagePCard">
+  <view>sada</view>
+  <view>sada</view>
+  <view>sada</view>
+  <view>sada</view>
+  <view style="padding:0 30% 0 30%"><button class="p-btn" bindtap="saveInfo"> 保 存</button></view>
 </view>
-<i-cell title="联系电话"><input class="weui-input" value="{{ tel }}" type="number" title="联系电话" bindinput="bindKeyInput1" placeholder="请输入手机号" /></i-cell>
-<!-- <i-cell title="学生姓名"><input class="weui-input" value="{{ value1 }}" type="textarea" title="学生姓名" bindinput="bindKeyInput2" autofocus placeholder="名字" /></i-cell> -->
-<i-cell title="分数"><input class="weui-input" value="{{ mark }}" type="textarea" title="学生姓名" bindinput="bindKeyInput2" autofocus placeholder="分数" /></i-cell>
-
-<i-cell title="年级">
-<!-- <input class="weui-input" value="{{ value3 }}" type="textarea" title="所在地" bindinput="bindKeyInput3" placeholder="省/市/区/学校" maxlength="50" /> -->
-  <picker bindchange="bindPickerChange" value="{{gradeIndex}}" range="{{grade}}">
-    <view class="picker">
-      当前选择：{{grade[gradeIndex]}}
-    </view>
-  </picker>
-</i-cell>
-<i-cell title="文理" wx:if="{{showSub}}">
-  <picker bindchange="bindSubChange" value="{{subIndex}}" range="{{subArray}}">
-    <view class="picker">
-      当前选择：{{subArray[subIndex]}}
-    </view>
-  </picker>
-</i-cell>
-<i-cell title="在哪上学">
-  <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
-    <view class="picker">
-      点击修改：{{region[0]}}，{{region[1]}}，{{region[2]}}
-    </view>
-  </picker>
-</i-cell>
-<i-cell title="选择学校" wx:if="{{isSetPlace}}">
-  <!-- <input class="weui-input" value="{{ school }}" type="textarea" title="学校" bindinput="bindKeyInput3" placeholder="学校"/> -->
-  <picker bindchange="bindSchoolChange" value="{{schoolIndex}}" range="{{schoolArray}}" range-key="{{'name'}}">
-    <view class="picker">
-      当前选择：{{schoolArray[schoolIndex].name}}
-    </view>
-  </picker>
-
-</i-cell>
-</i-panel>
-<view style='width: 100%;  height: 20rpx' />
-<i-button bind:click="confirm" type="primary">确认信息</i-button>
-
 <view style='width: 100%;  height: 40rpx' />
  指导信息
 <i-cell-group>
@@ -71,7 +35,7 @@
 <i-button bind:click="handleClick" type="error">注销</i-button>
 
 
-<i-tab-bar current="{{ current }}" color="#F7534F" bindchange="handleChange" fixed="true">
+<i-tab-bar current="{{ current }}" color="#7952b3" bindchange="handleChange" fixed="true">
     <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
     <i-tab-bar-item key="quiz" icon="remind" current-icon="remind_fill" title="测评"></i-tab-bar-item>
     <i-tab-bar-item key="mine" icon="mine" current-icon="mine_fill" title="我的"></i-tab-bar-item>
