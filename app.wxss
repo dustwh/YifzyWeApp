@@ -29,10 +29,7 @@
   background: white;
   margin: 22rpx 32rpx 0 32rpx;
   padding: 24rpx;
-  /* border-style: solid;
-  border-width: 1rpx;*/
   border-radius: 16rpx; 
-  /* border-color: #7952b3; */
 }
 .homepagePCard:hover{
   box-shadow: 0 0 0 3px rgba(121,82,179,.25);
@@ -47,4 +44,13 @@
 }
 .p-btn:hover{
   background: #7c47ccb0
+}
+.fbtn{
+  background-color: #fdeca6;
+  padding: 14rpx 28rpx 14rpx 28rpx;
+  font-weight: 500;
+  color: #614291;
+  margin-top: 14rpx;
+  border-radius: 14rpx;
+  letter-spacing: 3rpx
 }

@@ -25,8 +25,7 @@
     "pages/news/news",
     "pages/majorInfo/majorInfo",
     "pages/about/system/system",
-    "pages/legalAnn/legalAnn",
-    "pages/tb/tb"
+    "pages/legalAnn/legalAnn"
   ],
   "window": {
     "backgroundTextStyle": "light",

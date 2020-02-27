@@ -12,7 +12,7 @@
       <view style="font-size:29rpx;font-weight:100;color:#7952b3">{{subject}} / {{point}}  {{rankTitle}}{{rank}}</view>
     </view>
     <view class="userinfo">
-      <view bindtap="checkReport" class="fbtn">查看报告</view>
+      <view bindtap="checkReport" class="fbtn" style="margin-left:33.5%;margin-right:33.5%;">查看报告</view>
     </view>
   </view>
 </view>

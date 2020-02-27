@@ -5,3 +5,16 @@ page{
     background-size: contain;
     background-repeat: no-repeat;
 }
+.point-box{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  align-content: flex-start
+}
+.inner{
+  display: flex;
+  flex-wrap:nowrap;
+}
+.point-input{
+  width:96rpx;
+}

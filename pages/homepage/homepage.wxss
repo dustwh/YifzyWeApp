@@ -3,17 +3,6 @@ page {
     background-color: #eeeeee;
     /* background-color: #6e3eb6; */
 }
-.fbtn{
-  background-color: #fdeca6;
-  padding: 14rpx 28rpx 14rpx 28rpx;
-  font-weight: 500;
-  color: #614291;
-  margin-top: 14rpx;
-  margin-left: 35%;
-  margin-right: 35%;
-  border-radius: 14rpx;
-  letter-spacing: 3rpx
-}
 .homepagePCardHead{
   background-image: url("http://localhost:8080/img/system/PIBG.png");
   background-size: cover;
@@ -48,9 +37,6 @@ page {
   letter-spacing: 3rpx
 }
 .userinfo {
-  /* position: relative;   */
-  /* width: 750rpx;  
-  height: 320rpx;   */
   color: grey;
   display: flex;
   flex-direction: column;

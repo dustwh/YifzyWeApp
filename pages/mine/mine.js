@@ -5,7 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    current: 'mine'
+    current: 'mine',
+    total:750,
+    rank:123456
   },
   confirm:function(){
     wx.navigateTo({

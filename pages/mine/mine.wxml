@@ -1,11 +1,24 @@
 <!--pages/mine/mine.wxml-->
 <view style='width: 100%;  height: 40rpx' />
-  <view class="homepagePCard">
-  <view>sada</view>
-  <view>sada</view>
-  <view>sada</view>
-  <view>sada</view>
-  <view style="padding:0 30% 0 30%"><button class="p-btn" bindtap="saveInfo"> 保 存</button></view>
+<view class="homepagePCard">
+  <view class="point-box">
+    <view class="inner"><text style="color:grey">语文:</text><input class="point-input" type="number" maxlength="3" /></view>
+    <view class="inner"><text style="color:grey">数学:</text><input class="point-input" type="number" maxlength="3" /></view>
+    <view class="inner"><text style="color:grey">外语:</text><input class="point-input" type="number" maxlength="3" /></view>
+    <view class="inner"><text style="color:grey">物理:</text><input class="point-input" type="number" maxlength="3" /></view>
+    <view class="inner"><text style="color:grey">化学:</text><input class="point-input" type="number" maxlength="3" /></view>
+    <view class="inner"><text style="color:grey">生物:</text><input class="point-input" type="number" maxlength="3" /></view>
+  </view>
+  <view class="point-box" style="justify-content:space-between">
+    <view class="inner">
+      <text>总分:<text style="color:#644594">{{total}}</text></text>
+      <text>全省:<text style="color:#644594">{{rank}}</text></text>
+    </view>
+    <view class="inner">
+      <view bindtap="edit" class="fbtn">编辑</view>
+      <view bindtap="saveInfo" class="fbtn">保存</view>
+    </view>
+  </view>
 </view>
 <view style='width: 100%;  height: 40rpx' />
  指导信息
