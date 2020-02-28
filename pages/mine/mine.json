@@ -8,6 +8,8 @@
     "i-icon": "../../dist/icon/index",
     "i-button": "../../dist/button/index",
     "i-input": "../../dist/input/index",
-    "i-panel": "../../dist/panel/index"
+    "i-panel": "../../dist/panel/index",
+    "i-load-more": "../../dist/load-more/index",
+    "i-tag": "../../dist/tag/index"
   }
 }

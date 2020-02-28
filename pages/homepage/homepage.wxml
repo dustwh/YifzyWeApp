@@ -2,7 +2,7 @@
 <view class="homepagePCardHead">
   <view slot="content">
     <view class="userinfo">
-      <view bindtap="toMine" class="userinfo-avatar">
+      <view bindtap="toMine" class="userinfo-avatar" style="margin: 20rpx; margin-top: 50rpx;">
         <open-data  type="userAvatarUrl"></open-data>
       </view>
       <view style="font-size:36rpx;color:#7952b3">{{name}} {{school}}</view>

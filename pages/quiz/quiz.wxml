@@ -52,7 +52,9 @@
 </view>
 
 
-
+<view style='width: 100%;  height: 20rpx' />
+<i-load-more tip="到底啦" loading="{{ false }}" />
+<i-load-more loading="{{ false }}" />
 
 <i-tab-bar current="{{ current }}" color="#7952b3" bindchange="handleChange" fixed="true">
     <i-tab-bar-item key="homepage" icon="homepage" current-icon="homepage_fill" title="首页"></i-tab-bar-item>
