@@ -26,12 +26,25 @@ page{
 .row-flex{
   display: flex;
   flex-wrap:nowrap;
-  justify-content:flex-start;
+  justify-content:space-between;
   align-content:flex-start;
 }
 .sec-title{
-  text-decoration: underline;
-  text-decoration-color: #986de2;
+  display: flex;
+  align-content: center;
+  padding: 8rpx 14rpx 14rpx 0;
+  color: white;
+  background-color: #693eb1;
+  border-style: solid;
+  border-color: #693eb1;
+  border-top-right-radius: 50rpx;
+  border-bottom-right-radius: 50rpx
+}
+
+.i-load-more{
+  color:#693eb1
+}
+.i-load-more-line{
   color:#693eb1
 }
 /* wave effect */

@@ -1,6 +1,6 @@
 <view class="page-body">
 <i-panel title="商务合作">
-  <i-input value="{{ value1 }}" title="联系人" autofocus placeholder="那新" disabled />
+  <i-input value="{{ value1 }}" title="联系人" autofocus placeholder="潘泽光" disabled />
   <i-input value="{{ value2 }}" type="number" title="联系电话" placeholder="13842024403" disabled />
   <i-input value="{{ value3 }}" type="textarea" title="详细地址" placeholder="辽宁省 沈阳市 和平区" maxlength="50" disabled />
 </i-panel>
