@@ -5,6 +5,10 @@ Page({
    * 页面的初始数据
    */
   data: {
+    editMode:1,
+    visible1: false,
+    showPointDetail:true,
+    reason:"reason",
     current: 'mine',
     name:"",
     phone:"",
@@ -19,7 +23,7 @@ Page({
     sub2mark:0,
     sub3mark:0,
     total:750,
-    rank:123456
+    rank:""
   },
   confirm:function(){
     wx.navigateTo({
@@ -37,7 +41,25 @@ Page({
       url: dest_url
     })
   },
+  edit: function () {
+    this.setData({
+      visible1: true
+    });
+  },
+  handleDone:function() {
+    console.log("ok")
+    this.setData({
+      visible1: false
+    });
+  },
+  handleOk1:function() {
 
+  },
+  handleClose1() {
+    this.setData({
+      visible1: false
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -45,36 +67,85 @@ Page({
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
     wx.request({
-      url: 'http://localhost:8080/weapp/minePageInfoOnload',
+      url: 'http://192.168.43.187:8080/weapp/minePageInfoOnload',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId
       },
       success: function (res) {
-        console.log(res.data)
         var name=res.data.name
+        var year=res.data.year
+        var subjectCode = parseInt(res.data.subjectCode)
         var newCELabel=res.data.newCELabel
+        var isChooseComplete = parseInt(res.data.isChooseComplete)
+        var noChooseReason=res.data.noChooseReason
+        var chineseMark=parseInt(res.data.chineseMark)
+        var mathMark=parseInt(res.data.mathMark)
+        var flMark=parseInt(res.data.flMark)
         var sub1=res.data.sub1
+        var sub1mark=parseInt(res.data.sub1mark)
         var sub2=res.data.sub2
+        var sub2mark=parseInt(res.data.sub2mark)
         var sub3=res.data.sub3
-        var sub1mark=res.data.sub1mark
-        var sub2mark=res.data.sub2mark
-        var sub3mark=res.data.sub3mark
+        var sub3mark=parseInt(res.data.sub3mark)
+        var total = parseInt(res.data.total)
+        var editMode = isChooseComplete
+        if (chineseMark + mathMark + flMark + sub1mark + sub2mark + sub3mark == 0 || chineseMark + mathMark + flMark + sub1mark + sub2mark + sub3mark != total || isChooseComplete<0){
+          var show=false
+        }else{
+          var show=true
+        }
         var phone = wx.getStorageSync('phone');
+        console.log(noChooseReason)
+        console.log(total)
         that.setData({
+          editMode: editMode,
+          reason: noChooseReason,
+          showPointDetail:show,
           name:name,
           phone: phone,
           newCELabel:newCELabel,
           sub1:sub1,
           sub2:sub2,
           sub3:sub3,
-          chineseMark:222,
-          mathMark:222,
-          flMark:222,
-          sub1mark:111,
-          sub2mark:222,
-          sub3mark:333
+          chineseMark:chineseMark,
+          mathMark:mathMark,
+          flMark:flMark,
+          sub1mark:sub1mark,
+          sub2mark:sub2mark,
+          sub3mark:sub3mark,
+          total: total
         });
+        if (newCELabel != "新高考") {
+          if(subjectCode==1||subjectCode==5){
+            wx.request({
+              url: 'https://www.yifzy.com/teacher/fenduan/byfs',
+              method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+              data: {
+                'nf': 2019,
+                'pr': 210000,
+                'fs': total,
+                'kl': subjectCode
+              },
+              header: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              }, // 设置请求的 header
+              success: function (res) {
+                if (res.statusCode == '200') {
+                  console.log(res.data.result.wc)
+                  that.setData({
+                    rank: "全省:"+res.data.result.wc
+                  });
+                } else {
+                  console.log(statusCode)
+                }
+              },
+              fail: function (err) {
+                console.log(err);
+              }
+            })
+          }
+        }
       },
       fail: function () {
         console.log("fail")
@@ -82,7 +153,7 @@ Page({
     })
   },
 
-  show_wc:function(){
+  toUpdateInfo:function(){
     
   },
   /**

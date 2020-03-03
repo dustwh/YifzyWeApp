@@ -4,7 +4,7 @@ page {
     /* background-color: #6e3eb6; */
 }
 .homepagePCardHead{
-  background-image: url("http://localhost:8080/img/system/PIBG.png");
+  background-image: url("http://192.168.43.187:8080/img/system/PIBG.png");
   background-size: cover;
   background-repeat: no-repeat;
   margin: 22rpx 32rpx 0 32rpx;

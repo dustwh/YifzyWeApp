@@ -51,11 +51,11 @@ Page({
     this.mapCtx.includePoints({
       padding: [10],
       points: [{
-        latitude:23.10229,
-        longitude:113.3345211,
+        latitude:41.7582700000,
+        longitude:123.4232860000,
       }, {
-        latitude:23.00229,
-        longitude:113.3345211,
+        latitude:41.7582700000,
+        longitude:123.4232860000,
       }]
     })
   }

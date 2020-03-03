@@ -10,6 +10,7 @@
     "i-input": "../../dist/input/index",
     "i-panel": "../../dist/panel/index",
     "i-load-more": "../../dist/load-more/index",
-    "i-tag": "../../dist/tag/index"
+    "i-tag": "../../dist/tag/index",
+    "i-modal": "../../dist/modal/index"
   }
 }

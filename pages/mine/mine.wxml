@@ -1,4 +1,9 @@
 <!--pages/mine/mine.wxml-->
+<i-modal title="标题" visible="{{ visible1 }}" bind:ok="handleDone" bind:cancel="handleClose1">
+    <view wx:if="{{editMode==-1}}">文理</view>
+    <view wx:elif="{{editMode==-2}}">新高没选科</view>
+    <view wx:else>分不对</view>
+</i-modal>
 <view style='width: 100%;  height: 40rpx' />
 <view class="homepagePCard">
   <view class="point-box" style="justify-content:flex-start;">
@@ -10,18 +15,21 @@
       <view class="small-font" style="color:black;margin-top:6rpx">tel:{{phone}}</view>
     </view>
   </view>
-  <view class="point-box" style="margin-top:22rpx">
+  <view wx:if="{{showPointDetail}}" class="point-box" style="margin-top:22rpx">
     <view class="inner" style="color:grey"><text>语文:</text><text class="point-input">{{chineseMark}}</text></view>
     <view class="inner" style="color:grey"><text>数学:</text><text class="point-input">{{mathMark}}</text></view>
     <view class="inner" style="color:grey"><text>外语:</text><text class="point-input">{{flMark}}</text></view>
-    <view class="inner" style="color:grey"><text>{{sub1}}</text><text class="point-input">{{chineseMark}}</text></view>
-    <view class="inner" style="color:grey"><text>{{sub2}}</text><text class="point-input">{{mathMark}}</text></view>
-    <view class="inner" style="color:grey"><text>{{sub3}}</text><text class="point-input">{{flMark}}</text></view>
+    <view class="inner" style="color:grey"><text>{{sub1}}:</text><text class="point-input">{{chineseMark}}</text></view>
+    <view class="inner" style="color:grey"><text>{{sub2}}:</text><text class="point-input">{{mathMark}}</text></view>
+    <view class="inner" style="color:grey"><text>{{sub3}}:</text><text class="point-input">{{flMark}}</text></view>
+  </view>
+  <view wx:else class="point-box tip-wrap" style="padding-top:22rpx;height:64rpx;">
+    <view class="tip">{{reason}}</view>
   </view>
   <view class="point-box" style="justify-content:space-between;margin-top:28rpx">
     <view class="inner" style="margin-left:20rpx">
       <text>总分:<text style="color:#644594">{{total}}</text></text>
-      <text style="margin-left:26rpx">全省:<text style="color:#644594">{{rank}}</text></text>
+      <text style="margin-left:26rpx"><text style="color:#644594">{{rank}}</text></text>
     </view>
     <view class="inner">
       <view bindtap="edit" class="fbtn" style="font-size:12px"><i-icon type="editor" size="16" />编辑</view>
@@ -30,13 +38,13 @@
 </view>
 <view class="waveWrapper waveAnimation">
   <view class="waveWrapperInner bgTop">
-    <view class="wave waveTop" style="background-image: url('http://localhost:8080/img/system/wave-top.png');background-size:50% 50rpx"></view>
+    <view class="wave waveTop" style="background-image: url('http://192.168.43.187:8080/img/system/wave-top.png');background-size:50% 50rpx"></view>
   </view>
   <view class="waveWrapperInner bgMiddle">
-    <view class="wave waveMiddle" style="background-image: url('http://localhost:8080/img/system/wave-mid.png');background-size:50% 60rpx"></view>
+    <view class="wave waveMiddle" style="background-image: url('http://192.168.43.187:8080/img/system/wave-mid.png');background-size:50% 60rpx"></view>
   </view>
   <view class="waveWrapperInner bgBottom">
-    <view class="wave waveBottom" style="background-image: url('http://localhost:8080/img/system/wave-bot.png');background-size:50% 50rpx"></view>
+    <view class="wave waveBottom" style="background-image: url('http://192.168.43.187:8080/img/system/wave-bot.png');background-size:50% 50rpx"></view>
   </view>
 </view>
 <view style='width: 100%;  height: 120rpx' />

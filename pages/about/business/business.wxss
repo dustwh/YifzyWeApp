@@ -10,3 +10,7 @@ page {
 .page-body-button {
   margin-bottom: 20rpx;
 }
+
+.pbtn{
+  background-color: #693eb1
+}

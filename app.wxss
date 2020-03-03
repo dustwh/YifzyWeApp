@@ -46,10 +46,10 @@
   background: #7c47ccb0
 }
 .fbtn{
-  background-color: #fdeca6;
+  background-color: #2d8cf0;
   padding: 14rpx 28rpx 14rpx 28rpx;
   font-weight: 500;
-  color: #614291;
+  color: white;
   margin-top: 14rpx;
   border-radius: 14rpx;
   letter-spacing: 3rpx

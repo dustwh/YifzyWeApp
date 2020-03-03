@@ -1,6 +1,6 @@
 /* pages/mine/mine.wxss */
 page{
-    background-image: url("http://localhost:8080/img/system/minePageBG.jpg");
+    background-image: url("http://192.168.43.187:8080/img/system/minePageBG.jpg");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -29,6 +29,18 @@ page{
   justify-content:space-between;
   align-content:flex-start;
 }
+.tip-wrap{
+  background-color: #c0a8e9d3;
+  border-style: solid;
+  border-color: #c0a8e9d3;
+  border-radius: 20rpx
+}
+.tip{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-content:center;
+}
 .sec-title{
   display: flex;
   align-content: center;
@@ -41,12 +53,8 @@ page{
   border-bottom-right-radius: 50rpx
 }
 
-.i-load-more{
-  color:#693eb1
-}
-.i-load-more-line{
-  color:#693eb1
-}
+
+
 /* wave effect */
 @keyframes move_wave {
     0% {

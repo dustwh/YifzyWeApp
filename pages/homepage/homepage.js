@@ -10,7 +10,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     current: 'homepage',
     name:"name",
-    point:652,
+    point:750,
     school:"未登录无法显示",
     subject:"科目",
     rankTitle:"",
@@ -54,7 +54,7 @@ Page({
     })
   },
   toMine:function(){
-    wx.navigateTo({
+    wx.redirectTo({
       url:'../mine/mine'
     });
   },
@@ -78,7 +78,7 @@ Page({
     var sessionId = wx.getStorageSync("sessionId")
     console.log(sessionId)
     wx.request({
-      url: 'http://localhost:8080/weapp/testSession',
+      url: 'http://192.168.43.187:8080/weapp/testSession',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId
@@ -92,7 +92,7 @@ Page({
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
     wx.request({
-      url: 'http://localhost:8080/weapp/HomePageInfoGet',
+      url: 'http://192.168.43.187:8080/weapp/HomePageInfoGet',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId

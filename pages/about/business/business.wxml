@@ -1,7 +1,7 @@
 <view class="page-body">
 <i-panel title="商务合作">
   <i-input value="{{ value1 }}" title="联系人" autofocus placeholder="潘泽光" disabled />
-  <i-input value="{{ value2 }}" type="number" title="联系电话" placeholder="13842024403" disabled />
+  <i-input value="{{ value2 }}" type="number" title="联系电话" placeholder="18841425255" disabled />
   <i-input value="{{ value3 }}" type="textarea" title="详细地址" placeholder="辽宁省 沈阳市 和平区" maxlength="50" disabled />
 </i-panel>
   <view class="page-section page-section-gap">
@@ -16,9 +16,9 @@
     ></map>
       <view class="btn-area" style="padding-top:40rpx">
         <!-- <button bindtap="getCenterLocation" class="page-body-button" type="primary">获取位置</button> -->
-        <button bindtap="moveToLocation" class="page-body-button" type="primary">我的位置</button>
+        <button class="pbtn" bindtap="moveToLocation" class="page-body-button" type="default">您的位置</button>
         <!-- <button bindtap="translateMarker" class="page-body-button" type="primary">移动标注</button> -->
-        <button bindtap="includePoints" type="primary">缩放视野展示所有经纬度</button>
+        <button class="pbtn" bindtap="includePoints" type="default">我们的位置</button>
   </view>
   </view>
 </view>
