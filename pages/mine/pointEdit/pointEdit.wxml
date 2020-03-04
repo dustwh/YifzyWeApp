@@ -1,0 +1,7 @@
+<view>语文:<input bindinput="bindKeyInput1" auto-focus="true" class="weui-input" type="number" placeholder="1" /></view>
+<view>数学:<input  bindinput="bindKeyInput2" class="weui-input" type="number" placeholder="1" /></view>
+<view>外语:<input  bindinput="bindKeyInput3" class="weui-input" type="number" placeholder="1" /></view>
+<view>{{sub1}}:<input  bindinput="bindKeyInput4" class="weui-input" type="number" placeholder="2" /></view>
+<view>{{sub2}}:<input  bindinput="bindKeyInput5" class="weui-input" type="number" placeholder="2" /></view>
+<view>{{sub3}}:<input  bindinput="bindKeyInput6" class="weui-input" type="number" placeholder="2" /></view>
+<button bindtap="save">save</button>

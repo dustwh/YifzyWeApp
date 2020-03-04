@@ -1,16 +1,16 @@
 {
   "pages": [
     "pages/mine/mine",
+    "pages/newCE/newCE",
     "pages/login/login",
     "pages/homepage/homepage",
-    "pages/report/report",
     "pages/infoInit/infoInit",
+    "pages/report/report",
     "pages/about/business/business",
     "pages/about/yifzy/yifzy",
     "pages/MajorRepo/MajorRepo",
     "pages/moreQuiz/moreQuiz",
     "pages/quiz/quiz",
-    "pages/newCE/newCE",
     "pages/mySchoolCollect/mySchoolCollect",
     "pages/subInterest/subInterest",
     "pages/schoolChoose/schoolChoose",
@@ -25,7 +25,9 @@
     "pages/news/news",
     "pages/majorInfo/majorInfo",
     "pages/about/system/system",
-    "pages/legalAnn/legalAnn"
+    "pages/legalAnn/legalAnn",
+    "pages/mine/pointEdit/pointEdit",
+    "pages/mine/newCEChoose/newCEChoose"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -10,26 +10,37 @@
       </view>
     </i-col>
   </i-row>
+  <view style='width: 100%;  height: 20rpx'/>
+  <i-row>
+    <i-col offset="1" span="22" i-class="col-class">
+      <i-button bind:click="toNewCEChoose" type="primary" shape="circle" size="large">选科</i-button>
+    </i-col>
+  </i-row>
 </view>
-<view style='width: 100%;  height: 20rpx'/>
+<view style='width: 100%;  height: 5rpx'/>
 <view>
   <i-row>
     <i-col offset="1" span="10" i-class="col-class">
-      <view bindtap="checkReport" class="round-card card-color-0" style="margin-top:30rpx;height:204rpx;background-color:#3EE3C3;margin-left:10rpx">专业查选科
+      <view bindtap="" class="newCECardBox round-card card-color-0" style="margin-top:30rpx;height:204rpx;background-color:#3EE3C3;margin-left:10rpx">
+      <view class="newCETittle">专业查选科</view>
+      <view>本功能近日即将开放，敬请期待</view>
       </view>
     </i-col>
     <i-col offset="2" span="10" i-class="col-class">
-      <view bindtap="checkReport" class="round-card card-color-0" style="margin-top:30rpx;height:204rpx;background-color:#FF8060;margin-right:10rpx">大学查选科
+      <view bindtap="" class="newCECardBox round-card card-color-0" style="margin-top:30rpx;height:204rpx;background-color:#FF8060;margin-right:10rpx">
+      <view class="newCETittle">大学查选科</view>
+      <view>本功能近日即将开放，敬请期待</view>
       </view>
     </i-col>
   </i-row>
 </view>
-<view style='width: 100%;  height: 15rpx'/>
+
 <view>
   <i-row>
     <i-col offset="1" span="22" i-class="col-class">
-      <view bindtap="checkReport" class="round-card card-color-0" style="margin-top:30rpx;height:204rpx;background-color:#8081F7">
-      科目推专业
+      <view bindtap="" class="newCECardBox round-card card-color-0" style="margin-top:30rpx;height:204rpx;background-color:#8081F7">
+      <view class="newCETittle">科目推专业</view>
+      <view>本功能近日即将开放，敬请期待</view>
       </view>
     </i-col>
   </i-row>

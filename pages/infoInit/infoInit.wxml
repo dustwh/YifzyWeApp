@@ -15,7 +15,7 @@
 <i-cell title="文理" wx:if="{{showSub}}">
   <picker bindchange="bindSubChange" value="{{subIndex}}" range="{{subArray}}">
     <view class="picker">
-      当前选择：{{subArray[subIndex]}}
+      点击选择：{{subArray[subIndex]}}
     </view>
   </picker>
 </i-cell>

@@ -10,7 +10,7 @@ Page({
     region: ['', '', ''],
     regionCode: "",
     grade: ['点击选择', '高 1', '高 2', '高 3'],
-    subArray: ['选择文理', '文科', '理科'],
+    subArray: ['(文理一旦选择不可更改,请务必认真选择)', '文科', '理科'],
     schoolArray: [
       {
         id: 0,

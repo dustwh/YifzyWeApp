@@ -4,18 +4,20 @@ page{
     background-size: contain;
     background-repeat: no-repeat;
 }
-.point-box{
-  display: flex;
-  flex-wrap:wrap;
-  justify-content:space-around;
-  align-content: flex-start
+
+.edit-point-box{
+    display: flex;
+    flex-direction:column;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-content: center
 }
-.point-box-reverse{
+/* .point-box-reverse{
   display: flex;
   flex-wrap:wrap;
   justify-content:space-around;
   align-content: flex-end
-}
+} */
 .inner{
   display: flex;
   flex-wrap:nowrap;
@@ -29,18 +31,8 @@ page{
   justify-content:space-between;
   align-content:flex-start;
 }
-.tip-wrap{
-  background-color: #c0a8e9d3;
-  border-style: solid;
-  border-color: #c0a8e9d3;
-  border-radius: 20rpx
-}
-.tip{
-  display: flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  align-content:center;
-}
+
+
 .sec-title{
   display: flex;
   align-content: center;

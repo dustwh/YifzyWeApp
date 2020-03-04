@@ -9,3 +9,15 @@ page {
   border-radius: 35rpx;
   color: white
 }
+
+.newCECardBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+  padding-left: 22rpx
+}
+
+.newCETittle{
+  text-decoration: underline
+}

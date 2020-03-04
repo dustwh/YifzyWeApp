@@ -69,3 +69,23 @@
   font-size: 28rpx;
   letter-spacing: 3rpx
 }
+
+
+.point-box{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+  align-content: flex-start
+}
+.tip-wrap{
+  background-color: #c0a8e9d3;
+  border-style: solid;
+  border-color: #c0a8e9d3;
+  border-radius: 20rpx
+}
+.tip{
+  display: flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-content:center;
+}

@@ -10,6 +10,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     current: 'homepage',
     name:"name",
+    year:2017,
     point:750,
     school:"未登录无法显示",
     subject:"科目",
@@ -64,9 +65,16 @@ Page({
     })
   },
   toNewCE: function() {
-    wx.navigateTo({
-      url: '../newCE/newCE',
-    })
+    var year = this.data.year
+    if(year<=2017){
+      wx.showToast({
+        title: '您不是新高考生，无法使用本功能',
+      })
+    }else{
+      wx.navigateTo({
+        url: '../newCE/newCE',
+      })
+    }
   },
   toMajorRepo:function(){
     wx.navigateTo({
@@ -89,6 +97,9 @@ Page({
     })
   },
   onLoad: function () {
+
+  },
+  onShow:function(){
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
     wx.request({
@@ -99,10 +110,11 @@ Page({
       },
       success: function (res) {
         console.log(res.data)
-        var name=res.data.name
-        var point=res.data.point
+        var name = res.data.name
+        var year = res.data.year
+        var point = res.data.point
         var schoolCode = res.data.schoolCode
-        var subject=res.data.subject
+        var subject = res.data.subject
         var subjectCode = res.data.subjectCode
         var school = app.globalData.highschoolDictionary[schoolCode]
         console.log("here to check rec school list")
@@ -113,17 +125,18 @@ Page({
         // console.log(school)
         that.setData({
           name: name,
+          year:year,
           point: point,
           school: school,
           subject: subject,
-          optiRec:res.data.recSchoolOptimistic,
-          normRec:res.data.recSchoolNormal,
-          pessRec:res.data.recSchoolPessimistic
+          optiRec: res.data.recSchoolOptimistic,
+          normRec: res.data.recSchoolNormal,
+          pessRec: res.data.recSchoolPessimistic
         });
 
-        if (!(subject=="新高考")){
+        if (!(subject == "新高考")) {
           console.log("2017")
-          var getRankFromTeacher=-1
+          var getRankFromTeacher = -1
           wx.request({
             url: 'https://www.yifzy.com/teacher/fenduan/byfs',
             method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
@@ -151,11 +164,11 @@ Page({
               console.log(err);
             }
           })
-        }else{
+        } else {
           console.log("xin")
         }
       },
-      fail:function(){
+      fail: function () {
         console.log("fail")
       }
     })

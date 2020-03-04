@@ -1,0 +1,37 @@
+<!--pages/mine/newCEChoose/newCEPage.wxml-->
+<view style="padding-left:3%;padding-right:3%">
+  <view wx:if="{{isDoneQuiz}}" class="tip-wrap" bindtap="editElse" style="padding:22rpx;margin-top:20rpx;">
+    <view class="tip" style="justify-content: flex-end">选科之前，建议您先进行我们提供的测试，了解自己的最佳选科策略<view bindtap="toQuiz" class="fbtn" style="font-size:12px"><i-icon type="editor" size="16" />立即测试</view></view>
+  </view>
+
+  
+<i-panel>
+<i-divider  color="#2d8cf0" lineColor="#2d8cf0">物理历史二选一</i-divider>
+<i-cell title="二选一">
+  <picker bindchange="bindMainChange" value="{{mainChangeIndex}}" range="{{mainChangebArray}}">
+    <view class="picker">
+      {{mainChangebArray[mainChangeIndex]}}
+    </view>
+  </picker>
+</i-cell>
+<i-divider  color="#2d8cf0" lineColor="#2d8cf0">其余四科选两科</i-divider>
+<i-cell title="四选二">
+  <picker bindchange="bindViceChange1" value="{{viceChangeIndex1}}" range="{{viceChangebArray1}}">
+    <view class="picker">
+      先选择第一个：{{viceChangebArray1[viceChangeIndex1]}}
+    </view>
+  </picker>
+</i-cell>
+
+<i-cell title="四选二" wx:if="{{isDoneVice1}}">
+  <picker bindchange="bindViceChange2" value="{{viceChangeIndex2}}" range="{{viceChangebArray2}}">
+    <view class="picker">
+      再选则第二个：{{viceChangebArray2[viceChangeIndex2]}}
+    </view>
+  </picker>
+</i-cell>
+
+</i-panel>
+<view style='width: 100%;  height: 40rpx' />
+<i-button bind:click="confirm" type="primary">确认信息</i-button>
+</view>
