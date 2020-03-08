@@ -8,6 +8,6 @@
   </i-card>
     <view style='width: 100%;  height: 25rpx' />
   <view class="in-center center">
-    <view bindtap="toBack" class="center flex-item roundFakeBtn"><i-icon type="undo" size="38" color="#80848f" /></view>
+    <button style="margin:50rpx" bindtap="toBack" type="default">返回</button>
   </view>
 </view>

@@ -1,0 +1,8 @@
+<!--pages/mine/myMajor/myMajor.wxml-->
+<view style="padding-left:4%;padding-right:4%;margin-top:42rpx">
+  <view class="point-box" style="justify-content:flex-start">
+    <view wx:for="{{majors}}" class="m-wrap">{{index+1}} {{item}}</view>
+  </view>
+</view>
+<button style="margin:50rpx" bindtap="toMajorRepo" type="default">去专业库</button>
+<button style="margin:50rpx" bindtap="back" type="default">返回</button>

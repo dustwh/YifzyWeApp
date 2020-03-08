@@ -2,11 +2,11 @@
 <view>
   <i-row>
     <i-col offset="1" span="22" i-class="col-class">
-      <view class="round-card" style="margin-top:30rpx;height:313rpx;background-color:#0879CE">
+      <view class="round-card" style="margin-top:30rpx;height:313rpx;background-color:#0879CE;padding:24rpx">
           <view>智能选科</view>
           <view>结合辽宁省考生</view>
           <view>大数据综合分析（适合高一/高二学生）</view>
-          预计时长30分钟<i-button bind:click="toQuiz" type="primary" inline="true" size="small">开始制定最佳选</i-button>
+          预计时长30分钟<i-button bind:click="toQuiz" shape="circle"  inline="true" size="small">开始制定最佳选</i-button>
       </view>
     </i-col>
   </i-row>

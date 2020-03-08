@@ -1,18 +1,21 @@
-// pages/moreQuiz/moreQuiz.js
+// pages/service/service.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    text1:"本功能即将开放",
-    text2:"本功能即将开放",
-    text3:"本功能即将开放",
-    text4:"本功能即将开放",
-    text5:"本功能即将开放"
+
   },
-  toBack:function(){
+
+  toBack: function () {
     wx.navigateBack()
+  },
+  
+  toContact:function(){
+    wx.navigateTo({
+      url: '../about/bussiness/bussiness',
+    })
   },
   /**
    * 生命周期函数--监听页面加载

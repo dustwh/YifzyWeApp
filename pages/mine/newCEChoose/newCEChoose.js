@@ -60,31 +60,44 @@ Page({
     })
   },
   confirm:function(){
+    var mainChangeIndex=this.data.mainChangeIndex
+    var viceChangeIndex1=this.data.viceChangeIndex1
+    var viceChangeIndex2=this.data.viceChangeIndex2
     var canSubmit=1
-    if (viceChangeIndex1==viceChangeIndex2){
-      canSubmit=0
-      wx.showToast({
-        title: '四选二不能选择相同的科目',
-      })
-    }
+    
     if(mainChangeIndex==0){
       canSubmit = 0
       wx.showToast({
         title: '请在二选一中选择物理或历史',
+        icon:'none'
       })
+    }else{
+      if (viceChangeIndex1 == 0) {
+        canSubmit = 0
+        wx.showToast({
+          title: '请在四选二 第一科中进行选择',
+          icon: 'none'
+        })
+      }else{
+        if (viceChangeIndex2 == 0) {
+          canSubmit = 0
+          wx.showToast({
+            title: '请在四选二 第二科中进行选择',
+            icon: 'none'
+          })
+        }else{
+          if (viceChangeIndex1 == viceChangeIndex2) {
+            canSubmit = 0
+            wx.showToast({
+              title: '四选二不能选择相同的科目',
+              icon: 'none'
+            })
+          }
+        }
+      }
     }
-    if (viceChangeIndex1 == 0) {
-      canSubmit = 0
-      wx.showToast({
-        title: '请在四选二 第一科中进行选择',
-      })
-    }
-    if (viceChangeIndex2 == 0) {
-      canSubmit = 0
-      wx.showToast({
-        title: '请在四选二 第二科中进行选择',
-      })
-    }
+    
+    
     if (canSubmit==1){
       var subResultArr=[0,0,0,0,0,0]
       var subResult=""

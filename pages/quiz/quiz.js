@@ -20,6 +20,11 @@ Page({
       url: '../ennTest/ennTest',
     })
   },
+  checkReport:function(){
+    wx.navigateTo({
+      url: '../report/report',
+    })
+  },
   toMoreQuiz:function(){
     wx.navigateTo({
       url: '../moreQuiz/moreQuiz',

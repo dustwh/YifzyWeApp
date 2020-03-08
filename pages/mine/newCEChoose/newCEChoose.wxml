@@ -33,5 +33,5 @@
 
 </i-panel>
 <view style='width: 100%;  height: 40rpx' />
-<i-button bind:click="confirm" type="primary">确认信息</i-button>
+    <button bindtap="confirm" type="default" style="margin-left:3%;margin-right:3%">确认信息</button>
 </view>

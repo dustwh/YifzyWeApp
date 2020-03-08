@@ -1,1 +1,6 @@
 /* pages/mine/pointEdit/pointEdit.wxss */
+.pinput{
+  height: 76rpx;
+  border-bottom-style: solid;
+  border-bottom-color: #693eb1
+}

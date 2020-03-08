@@ -192,5 +192,6 @@
     </view>
   </view>
 </view>
-<view style='width: 100%;  height: 25rpx' />
-<button bindtap="nBack" type="primary">返回</button>
+<view style='width: 100%;  height: 55rpx' />
+<button style="margin:50rpx" bindtap="nBack" type="default">返回</button>
+<view style='width: 100%;  height: 35rpx' />

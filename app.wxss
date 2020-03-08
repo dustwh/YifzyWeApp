@@ -5,7 +5,20 @@
   flex-direction: row;
   justify-content: space-between;
   box-sizing: border-box;
-} 
+}
+.intro{
+  margin-top: 25rpx;
+  margin-left: 5%;
+  margin-right: 5%
+}
+.intro-text{
+  font-size:26rpx;
+  font-family:PingFangSC-Regular,PingFang SC;
+  font-weight:1;
+  color:rgba(104,104,107,1);
+  line-height:35rpx;
+  letter-spacing:1rpx;
+}
 .center{
   align-items: center;
 }

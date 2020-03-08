@@ -1,0 +1,40 @@
+<!--pages/service/service.wxml-->
+
+
+<view class="intro">
+  <view class="serviceTitle">我们提供如下服务:</view>
+  <i-row>
+    <i-col offset="1" span="22" i-class="col-class">
+      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:160rpx;background-color:#ec5463">
+        <view class="c-tittlet">高考志愿填报</view>
+        <view class="c-text-t">"规范化服务，三轮审核复查"</view>
+      </view>
+      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:160rpx;background-color:#fdce58">
+        <view class="c-tittlet">综合评价培训</view>
+        <view class="c-text-t">"高录取率保障，责任式督学护航"</view>
+      </view>
+      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:160rpx;background-color:#a3d071">
+        <view class="c-tittlet">艺考志愿填报</view>
+        <view class="c-text-t">"大数据分析，10年以上经验老师制定方案"</view>
+      </view>
+      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:160rpx;background-color:#48cfaf">
+        <view class="c-tittlet">新高考选科</view>
+        <view class="c-text-t">"一对一量身定制"</view>
+      </view>
+      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:160rpx;background-color:#4fc0e8">
+        <view class="c-tittlet">职业规划</view>
+        <view class="c-text-t">"符合孩子切身情况，多维度考虑分析"</view>
+      </view>
+      <view class="quiz-intro-card card-color-1" style="margin-top:25rpx;height:160rpx;background-color:#3388ff">
+        <view class="c-tittlet">学业规划</view>
+        <view class="c-text-t">"激发主观能动性，授之以渔"</view>
+      </view>
+    </i-col>
+  </i-row>
+</view>
+
+<view style='width: 100%;  height: 60rpx' />
+<button style="margin-left:3.5%;margin-right:3.5%" bindtap="toContact" type="primary">联系我们或商务合作</button>
+<view style='width: 100%;  height: 28rpx' />
+<button style="margin-left:3.5%;margin-right:3.5%" bindtap="toBack" type="default">返回</button>
+<view style='width: 100%;  height: 30rpx' />

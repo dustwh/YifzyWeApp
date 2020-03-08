@@ -1,0 +1,9 @@
+/* pages/mine/myMajor/myMajor.wxss */
+.m-wrap{
+  background-color: #c0a8e9d3;
+  border-style: solid;
+  border-color: #c0a8e9d3;
+  border-radius: 20rpx;
+  padding:10rpx;
+  margin: 10rpx
+}

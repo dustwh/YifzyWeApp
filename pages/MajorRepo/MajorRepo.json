@@ -5,8 +5,6 @@
     "i-button": "../../dist/button/index",
     "i-tabs": "../../dist/tabs/index",
     "i-tab": "../../dist/tab/index",
-    "i-collapse": "../../dist/collapse/index",
-    "i-collapse-item": "../../dist/collapse-item/index",
     "i-modal": "../../dist/modal/index"
   }
 }

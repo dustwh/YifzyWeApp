@@ -6,4 +6,5 @@
     <i-tab key="rank4" title="排名4"></i-tab>
     <i-tab key="rank5" title="排名5"></i-tab>
 </i-tabs>
+<view style='width: 100%;  height: 100rpx' />
 <image src="{{url}}"></image>

@@ -57,10 +57,13 @@
   <text>指导信息</text>
 </view>
 <i-cell-group>
-    <i-cell title="我的院校" is-link url="../quiz/quiz">
+    <!-- <i-cell title="我的院校" is-link url="./myUni/myUni">
+      <i-icon slot="icon" type="task_fill" />
+    </i-cell> -->
+    <i-cell title="我的院校" bindtap="myUni">
       <i-icon slot="icon" type="task_fill" />
     </i-cell>
-    <i-cell title="我的专业" is-link url="../quiz/quiz">
+    <i-cell title="我的专业" is-link url="./myMajor/myMajor">
       <i-icon slot="icon" type="task_fill" />
     </i-cell>
 </i-cell-group>

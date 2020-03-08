@@ -30,7 +30,7 @@ Page({
     var school = event.currentTarget.dataset.schoolCode
     console.log(school)
     wx.showToast({
-      title: '展示学校信息'
+      title: '本功能即将开放'
     })
   },
   toQuiz:function(){
@@ -77,6 +77,9 @@ Page({
     }
   },
   toMajorRepo:function(){
+    // wx.showToast({
+    //   title: '本功能即将上线',
+    // })
     wx.navigateTo({
       url: '../MajorRepo/MajorRepo',
     })
@@ -94,6 +97,11 @@ Page({
       success: function (res) {
         console.log(res.data)
       }
+    })
+  },
+  toService:function(){
+    wx.navigateTo({
+      url: '../service/service',
     })
   },
   onLoad: function () {

@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "新高考选科",
   "usingComponents": {
         "i-input": "../../dist/input/index",
         "i-cell-group": "../../dist/cell-group/index",

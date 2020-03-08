@@ -38,7 +38,7 @@ Page({
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
     wx.request({
-      url: "http://localhost:8080/weapp/getWxEnnResult",
+      url: "http://192.168.43.187:8080/weapp/getWxEnnResult",
       method: "POST",
       header: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -73,7 +73,7 @@ Page({
 
 
     wx.request({
-      url: "http://localhost:8080/weapp/getWxHolRes",
+      url: "http://192.168.43.187:8080/weapp/getWxHolRes",
       method: "POST",
       header: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -105,7 +105,7 @@ Page({
 
 
     wx.request({
-      url: "http://localhost:8080/weapp/getWxMajorRecList",
+      url: "http://192.168.43.187:8080/weapp/getWxMajorRecList",
       method: "POST",
       header: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -139,7 +139,7 @@ Page({
 
 
     wx.request({
-      url: "http://localhost:8080/weapp/getItlRes",
+      url: "http://192.168.43.187:8080/weapp/getItlRes",
       method: "POST",
       header: {
         "Content-Type": "application/x-www-form-urlencoded",
