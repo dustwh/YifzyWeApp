@@ -36,7 +36,7 @@ Page({
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/getCanSeeReport',
+      url: 'https://www.yifzy.com/weapp/getCanSeeReport',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId
@@ -74,7 +74,7 @@ Page({
     var schoolCode = e.currentTarget.dataset.code
     var that = this
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/getRecSchoolInfo',
+      url: 'https://www.yifzy.com/weapp/getRecSchoolInfo',
       method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       data: {
         schoolCode: schoolCode
@@ -169,7 +169,7 @@ Page({
   },
   showNews:function(){
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/getNews',
+      url: 'https://www.yifzy.com/weapp/getNews',
       header: {
         'content-type': 'application/json',
       },
@@ -186,7 +186,7 @@ Page({
     var sessionId = wx.getStorageSync("sessionId")
     // console.log(sessionId)
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/testSession',
+      url: 'https://www.yifzy.com/weapp/testSession',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId
@@ -208,7 +208,7 @@ Page({
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/HomePageInfoGet',
+      url: 'https://www.yifzy.com/weapp/HomePageInfoGet',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId

@@ -15,7 +15,7 @@ Page({
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/getGuidSubjectNames',
+      url: 'https://www.yifzy.com/weapp/getGuidSubjectNames',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId

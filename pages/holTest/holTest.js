@@ -52,7 +52,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "http://localhost:8080/getNextHol",
+        url: "https://www.yifzy.com/weapp/getNextHol",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -86,7 +86,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "http://localhost:8080/getNextHol",
+        url: "https://www.yifzy.com/weapp/getNextHol",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -157,7 +157,7 @@ Page({
     var answers = this.data.answers
     var sort = this.data.sub1 + ":" + this.data.sub2 + ":" + this.data.sub3 + ":" + this.data.sub4 + ":" + this.data.sub5 + ":" + this.data.sub6 + ":"
     wx.request({
-      url: "http://localhost:8080/wxCalculateJobInterest",
+      url: "https://www.yifzy.com/wxCalculateJobInterest",
       method: "POST",
       data: {
         tel: tel,

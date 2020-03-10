@@ -20,7 +20,7 @@ Page({
     var sessionId = wx.getStorageSync("sessionId")
     // console.log(sessionId)
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/t',
+      url: 'https://www.yifzy.com/weapp/t',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId
@@ -99,7 +99,7 @@ Page({
       success: res => {
       // console.log(res.code);
       wx.request({
-        url: 'http://192.168.43.187:8080/weapp/getPhoneNumber',
+        url: 'https://www.yifzy.com/weapp/getPhoneNumber',
         data: {
           'encryptedData': e.detail.encryptedData,
           'iv': e.detail.iv,

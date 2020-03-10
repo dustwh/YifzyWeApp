@@ -22,7 +22,7 @@ Page({
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/isDoneWXQuiz',
+      url: 'https://www.yifzy.com/weapp/isDoneWXQuiz',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId

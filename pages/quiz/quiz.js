@@ -19,7 +19,7 @@ Page({
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/getCanSeeReport',
+      url: 'https://www.yifzy.com/weapp/getCanSeeReport',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId
@@ -46,7 +46,7 @@ Page({
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/getCanSeeReport',
+      url: 'https://www.yifzy.com/weapp/getCanSeeReport',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId

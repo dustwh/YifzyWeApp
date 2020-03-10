@@ -122,7 +122,7 @@ Page({
       })
     }else{
       wx.request({
-        url: "http://localhost:8080/weapp/wxSaveInitInfo",
+        url: "https://www.yifzy.com/weapp/wxSaveInitInfo",
         method: "POST",
         data: {
           telInfo: telInfo,
@@ -169,7 +169,7 @@ Page({
       tel: phone
     });
     wx.request({
-      url: "http://localhost:8080/weapp/infoInitGetInfo",
+      url: "https://www.yifzy.com/weapp/infoInitGetInfo",
       method: "POST",
       header: {
         "Content-Type": "application/x-www-form-urlencoded",

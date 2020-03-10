@@ -113,7 +113,7 @@ Page({
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/minePageInfoOnload',
+      url: 'https://www.yifzy.com/weapp/minePageInfoOnload',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId

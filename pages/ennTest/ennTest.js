@@ -46,7 +46,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "http://localhost:8080/weapp/getNextEnn",
+        url: "https://www.yifzy.com/weapp/getNextEnn",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -78,7 +78,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "http://localhost:8080/getNextEnn",
+        url: "https://www.yifzy.com/getNextEnn",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -147,7 +147,7 @@ Page({
     var tel = wx.getStorageSync("tel")
     var ennanswers = this.data.answers
     wx.request({
-      url: "http://localhost:8080/wxcalculatePTypes",
+      url: "https://www.yifzy.com/wxcalculatePTypes",
       method: "POST",
       data: {
         tel: tel,

@@ -183,7 +183,7 @@ Page({
       imodalShow:true
     })
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/getMajorInfo',
+      url: 'https://www.yifzy.com/weapp/getMajorInfo',
       method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       data: {
         majorCode:code
@@ -326,7 +326,7 @@ Page({
     if (e.currentTarget.dataset.index != this.data.showIndex) {
       var code = e.currentTarget.dataset.code;
       wx.request({
-        url: 'http://192.168.43.187:8080/weapp/getMajorRepo',
+        url: 'https://www.yifzy.com/weapp/getMajorRepo',
         method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
         data: {
           majorCode: code

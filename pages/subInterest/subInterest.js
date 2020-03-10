@@ -51,7 +51,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "http://localhost:8080/getNextSi",
+        url: "https://www.yifzy.com/weapp/getNextSi",
         method: "GET",
         data:{
           towhich: that.data.which
@@ -82,7 +82,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "http://localhost:8080/getNextSi",
+        url: "https://www.yifzy.com/weapp/getNextSi",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -113,7 +113,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "http://localhost:8080/getNextSi",
+        url: "https://www.yifzy.com/weapp/getNextSi",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -144,7 +144,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "http://localhost:8080/getNextSi",
+        url: "https://www.yifzy.com/weapp/getNextSi",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -175,7 +175,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "http://localhost:8080/getNextSi",
+        url: "https://www.yifzy.com/weapp/getNextSi",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -249,7 +249,7 @@ Page({
     console.log(siAnswers)
     console.log(sort)
     wx.request({
-      url: "http://localhost:8080/wxCalculateSITest",
+      url: "https://www.yifzy.com/wxCalculateSITest",
       method: "POST",
       data: {
         tel: tel,
