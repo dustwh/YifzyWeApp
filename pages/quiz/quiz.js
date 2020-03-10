@@ -16,13 +16,57 @@ Page({
     text4:'根据独家算法，帮你发现自己的优势学科'
   },
   toAllTest:function(){
-    wx.navigateTo({
-      url: '../ennTest/ennTest',
+    var that = this
+    var sessionId = wx.getStorageSync("sessionId")
+    wx.request({
+      url: 'http://192.168.43.187:8080/weapp/getCanSeeReport',
+      header: {
+        'content-type': 'application/json',
+        'Cookie': sessionId
+      },
+      success: function (res) {
+        // console.log(res.data)
+        if (res.data == "yes") {
+          wx.showToast({
+            title: '已经测试过',
+            icon: 'none'
+          })
+        } else {
+          wx.navigateTo({
+            url: '../ennTest/ennTest',
+          })
+        }
+      },
+      fail: function () {
+        console.log("fail")
+      }
     })
   },
   checkReport:function(){
-    wx.navigateTo({
-      url: '../report/report',
+    var that = this
+    var sessionId = wx.getStorageSync("sessionId")
+    wx.request({
+      url: 'http://192.168.43.187:8080/weapp/getCanSeeReport',
+      header: {
+        'content-type': 'application/json',
+        'Cookie': sessionId
+      },
+      success: function (res) {
+        // console.log(res.data)
+        if (res.data == "yes") {
+          wx.navigateTo({
+            url: '../report/report',
+          })
+        } else {
+          wx.showToast({
+            title: '尚未进行测试',
+            icon: 'none'
+          })
+        }
+      },
+      fail: function () {
+        console.log("fail")
+      }
     })
   },
   toMoreQuiz:function(){
@@ -36,7 +80,7 @@ Page({
     });
     var dest_page = detail.key
     var dest_url = '../' + dest_page + '/' + dest_page
-    console.log(dest_url)
+    // console.log(dest_url)
     wx.redirectTo({
       url: dest_url
     })

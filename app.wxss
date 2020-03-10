@@ -34,10 +34,7 @@
 .f-col{
   flex-direction: column;
 }
-.btn-mellon{
-  background-color:#F7534F;
-  color: white
-}
+
 .homepagePCard{
   background: white;
   margin: 22rpx 32rpx 0 32rpx;

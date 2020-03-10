@@ -46,7 +46,7 @@ Page({
       },
       success: function (res) {
         if (res.statusCode == '200') {
-          console.log(res.data)
+          // console.log(res.data)
           var ennResultString = res.data
           var ennResArr = ennResultString.split(',')
           that.setData({
@@ -81,7 +81,7 @@ Page({
       },
       success: function (res) {
         if (res.statusCode == '200') {
-          console.log(res.data)
+          // console.log(res.data)
           var holResultString = res.data
           var holResArr = holResultString.split(',')
           that.setData({
@@ -113,7 +113,7 @@ Page({
       },
       success: function (res) {
         if (res.statusCode == '200') {
-          console.log(res.data)
+          // console.log(res.data)
           var itlResult = res.data
           var itlArr = itlResult.split(',')
           that.setData({
@@ -128,7 +128,10 @@ Page({
           })
 // lll
         } else {
-          console.log("网络似乎出小差，请检查wifi或流量")
+          wx.showToast({
+            title: '网络似乎出小差，请检查wifi或流量',
+            icon:"none"
+          })
           // $Message({
           //   content: '与服务器通讯失败',
           //   type: 'error'

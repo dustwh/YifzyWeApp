@@ -9,6 +9,7 @@
     "i-load-more": "../../dist/load-more/index",
     "i-icon": "../../dist/icon/index",
     "i-cell-group": "../../dist/cell-group/index",
-    "i-cell": "../../dist/cell/index"
+    "i-cell": "../../dist/cell/index",
+    "i-modal": "../../dist/modal/index"
   }
 }

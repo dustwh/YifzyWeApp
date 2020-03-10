@@ -21,3 +21,13 @@ page {
 .newCETittle{
   text-decoration: underline
 }
+.ybtn{
+  margin-top: 12rpx;
+  padding: 8rpx;
+  color: black;
+  background-color: #fae106;
+  width: 262rpx;
+  border-radius: 10rpx;
+  border-style: solid;
+  border-color: #fae206b2
+}

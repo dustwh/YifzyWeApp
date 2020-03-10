@@ -92,3 +92,8 @@
   font-size: 22rpx;
   color: #9B9B9B;
 }
+.btn-mellon{
+  padding:6rpx;
+  background-color:rgba(125, 58, 224, 0.87);
+  color: white
+}

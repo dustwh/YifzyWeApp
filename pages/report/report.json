@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "测试结果",
   "usingComponents": {
     "i-row": "../../dist/row/index",
     "i-col": "../../dist/col/index",

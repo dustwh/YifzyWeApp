@@ -1,12 +1,13 @@
 {
   "pages": [
     "pages/login/login",
-    "pages/service/service",
+    "pages/newCE/newCE",
+    "pages/schoolChoose/schoolChoose",
     "pages/homepage/homepage",
+    "pages/service/service",
     "pages/moreQuiz/moreQuiz",
     "pages/MajorRepo/MajorRepo",
     "pages/mine/pointEdit/pointEdit",
-    "pages/newCE/newCE",
     "pages/infoInit/infoInit",
     "pages/report/report",
     "pages/about/business/business",
@@ -14,7 +15,6 @@
     "pages/quiz/quiz",
     "pages/mySchoolCollect/mySchoolCollect",
     "pages/subInterest/subInterest",
-    "pages/schoolChoose/schoolChoose",
     "pages/text/text",
     "pages/subRecMaj/subRecMaj",
     "pages/subChoose/searchSchool/searchResult/searchResult",

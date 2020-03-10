@@ -14,7 +14,7 @@ Page({
   
   toContact:function(){
     wx.navigateTo({
-      url: '../about/bussiness/bussiness',
+      url: '../about/business/business',
     })
   },
   /**

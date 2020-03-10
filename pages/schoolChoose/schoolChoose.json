@@ -1,4 +1,5 @@
 {
+  "navigationBarTitleText": "学校搜索",
   "usingComponents": {
     "i-input": "../../dist/input/index",
     "i-button": "../../dist/button/index",

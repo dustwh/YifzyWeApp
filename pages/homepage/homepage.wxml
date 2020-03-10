@@ -1,3 +1,11 @@
+  <i-modal title="{{univrctName}}" visible="{{ imodalShow }}" bind:ok="handleClose1" bind:cancel="handleClose1">
+      <view>{{univrctTag}}</view>
+      <view>办学类型：{{univrctType}}</view>
+      <view>地理位置：{{univrctLocation}}</view>
+      <view>隶属于：{{univrctAffiliate}}</view>
+      <view>办学层次：{{univrctLevel}}</view>
+      <view>学校官网：{{univrctHomePage}}</view>
+  </i-modal>
 <view class="homeTopBg"></view>
 <view class="homepagePCardHead">
   <view slot="content">
@@ -18,66 +26,67 @@
 </view>
 <view style='width: 100%;  height: 10rpx' />
 <view class="homepagePCard">
-<view class="container h-pannel-zone">
-            <view bindtap="toNewCE" class="flex-item in-center f-col">
-                <view class="flex-item">
-                    <!-- <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image> -->
-                    <i-icon type="browse" size="32" color="#644594" />
-                </view>
-                <view class="flex-item small-font">新高考</view>
+    <view class="container h-pannel-zone">
+        <view bindtap="toNewCE" class="flex-item in-center f-col">
+            <view class="flex-item">
+                <!-- <image src="../../img/neu.png" style="width:80rpx;height:80rpx"></image> -->
+                <i-icon type="browse" size="32" color="#644594" />
             </view>
-
-            <view bindtap="toQuiz" class="flex-item in-center f-col">
-                <view class="flex-item">
-                    <i-icon type="brush" size="32" color="#644594" />
-                </view>
-                <view class="flex-item small-font">测评</view>
-            </view>
-
-            <view class="flex-item in-center f-col">
-                <view class="flex-item">
-                    <i-icon type="homepage" size="32" color="#a7a7a7" />
-                </view>
-                <view class="flex-item small-font">院校</view>
-            </view>
-
-            <view bindtap="toMajorRepo" class="flex-item in-center f-col">
-                <view class="flex-item">
-                    <i-icon type="tasklist" size="32" color="#644594" />
-                </view>
-                <view class="flex-item small-font">专业</view>
-            </view>
+            <view class="flex-item small-font">新高考</view>
         </view>
+
+        <view bindtap="toQuiz" class="flex-item in-center f-col">
+            <view class="flex-item">
+                <i-icon type="brush" size="32" color="#644594" />
+            </view>
+            <view class="flex-item small-font">测评</view>
+        </view>
+
+        <view bindtap="toUniRepo" class="flex-item in-center f-col">
+        <!-- <view class="flex-item in-center f-col"> -->
+            <view class="flex-item">
+                <i-icon type="homepage" size="32" color="#a7a7a7" />
+            </view>
+            <view class="flex-item small-font">院校</view>
+        </view>
+
+        <view bindtap="toMajorRepo" class="flex-item in-center f-col">
+            <view class="flex-item">
+                <i-icon type="tasklist" size="32" color="#644594" />
+            </view>
+            <view class="flex-item small-font">专业</view>
+        </view>
+    </view>
 
     <view class="container h-pannel-zone">
-            <view bindtap="startTest" class="flex-item in-center f-col">
-                <view class="flex-item">
-                    <i-icon type="other" size="32" color="#a7a7a7" />
-                </view>
-                <view class="flex-item small-font">分数线</view>
+        <view bindtap="toMarkLine" class="flex-item in-center f-col">
+            <view class="flex-item">
+                <i-icon type="other" size="32" color="#a7a7a7" />
             </view>
-
-            <view class="flex-item in-center f-col">
-                <view class="flex-item">
-                    <i-icon type="keyboard" size="32" color="#a7a7a7" />
-                </view>
-                <view class="flex-item small-font">位次批次</view>
-            </view>
-
-            <view bindtap="toUniversityRank" class="flex-item in-center f-col">
-                <view class="flex-item">
-                    <i-icon type="dynamic" size="32" color="#a7a7a7" />
-                </view>
-                <view class="flex-item small-font">大学排名</view>
-            </view>
-
-            <view bindtap="toService" class="flex-item in-center f-col">
-                <view class="flex-item">
-                    <i-icon type="customerservice" size="32" color="#644594" />
-                </view>
-                <view class="flex-item small-font">服务</view>
-            </view>
+            <view class="flex-item small-font">分数线</view>
         </view>
+
+        <view class="flex-item in-center f-col">
+            <view class="flex-item">
+                <i-icon type="keyboard" size="32" color="#a7a7a7" />
+            </view>
+            <view class="flex-item small-font">位次批次</view>
+        </view>
+
+        <view bindtap="toUniversityRank" class="flex-item in-center f-col">
+            <view class="flex-item">
+                <i-icon type="dynamic" size="32" color="#a7a7a7" />
+            </view>
+            <view class="flex-item small-font">大学排名</view>
+        </view>
+
+        <view bindtap="toService" class="flex-item in-center f-col">
+            <view class="flex-item">
+                <i-icon type="customerservice" size="32" color="#644594" />
+            </view>
+            <view class="flex-item small-font">服务</view>
+        </view>
+    </view>
 </view>
 <view style='width: 100%;  height: 10rpx' />
 <view class="rec-card">
@@ -85,7 +94,7 @@
       <i-cell title="可冲击志愿">
         <i-icon slot="icon" type="flashlight_fill" size="18" color="#ffe96e" />
       </i-cell>
-      <i-cell wx:for="{{optiRec}}" data-schoolCode="{{item}}" bindtap="schoolInfo" title="{{index+1}} {{item}}" is-link></i-cell>
+      <i-cell wx:for="{{optiRec}}" data-code="{{recCodesopts[index]}}" bindtap="schoolInfo" title="{{index+1}} {{item}}"></i-cell>
   </i-cell-group>
 </view>
 
@@ -94,7 +103,7 @@
       <i-cell title="预计稳定志愿">
         <i-icon slot="icon" type="success_fill" size="18" color="#3F48CC" />
       </i-cell>
-      <i-cell wx:for="{{normRec}}" data-schoolCode="{{item}}" bindtap="schoolInfo" title="{{index+1}} {{item}}" is-link></i-cell>
+      <i-cell wx:for="{{normRec}}" data-code="{{recCodesnors[index]}}" bindtap="schoolInfo" title="{{index+1}} {{item}}"></i-cell>
   </i-cell-group>
 </view>
 
@@ -103,22 +112,22 @@
       <i-cell title="保底用志愿">
         <i-icon slot="icon" type="lock_fill" size="18" color="#7952b3" />
       </i-cell>
-      <i-cell wx:for="{{pessRec}}" data-schoolCode="{{item}}" bindtap="schoolInfo" title="{{index+1}} {{item}}" is-link></i-cell>
+      <i-cell wx:for="{{pessRec}}" data-code="{{recCodespess[index]}}" bindtap="schoolInfo" title="{{index+1}} {{item}}"></i-cell>
   </i-cell-group>
 </view>
 <view style='width: 100%;  height: 10rpx' />
 
-<view class="rec-card">
-  <i-cell-group>
-      <i-cell title="关于专业，你必须了解"></i-cell>
-      <i-cell title="男生适合的专业" is-link></i-cell>
-      <i-cell title="女生适合的专业" is-link></i-cell>
-      <i-cell title="高薪专业" is-link></i-cell>
-      <i-cell title="热门专业" is-link></i-cell>
-      <i-cell title="热门专业" is-link></i-cell>
-      <i-cell title="高薪专业" is-link></i-cell>
-  </i-cell-group>
-</view>
+<!-- <view class="rec-card"> -->
+  <!-- <i-cell-group>
+      <i-cell data-news="1" bindtap="showNews" title="关于专业，你必须了解"></i-cell>
+      <i-cell data-news="2" bindtap="showNews" title="男生适合的专业"></i-cell>
+      <i-cell data-news="3" bindtap="showNews" title="女生适合的专业"></i-cell>
+      <i-cell data-news="4" bindtap="showNews" title="高薪专业"></i-cell>
+      <i-cell data-news="5" bindtap="showNews" title="热门专业"></i-cell>
+      <i-cell data-news="6" bindtap="showNews" title="热门专业"></i-cell>
+      <i-cell data-news="7" bindtap="showNews" title="高薪专业"></i-cell>
+  </i-cell-group> -->
+<!-- </view> -->
 <view style='width: 100%;  height: 20rpx' />
 <i-load-more tip="到底啦" loading="{{ false }}" />
 <i-load-more loading="{{ false }}" />

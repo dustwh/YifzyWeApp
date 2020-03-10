@@ -5,19 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    searchText:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  tap_a_rec: function () {
-    console.log("asdsad")
-  },
+  // tap_a_rec: function () {
+  //   console.log("asdsad")
+  // },
   onLoad: function (options) {
 
   },
-
+  searchInput:function(e){
+    this.setData({
+      searchText: e.detail.value
+    })
+  },
+  search:function(){
+    console.log(this.data.searchText)
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
