@@ -43,13 +43,13 @@
 </view>
 <view class="waveWrapper waveAnimation">
   <view class="waveWrapperInner bgTop">
-    <view class="wave waveTop" style="background-image: url('http://192.168.43.187:8080/img/system/wave-top.png');background-size:50% 50rpx"></view>
+    <view class="wave waveTop" style="background-image: url('https://www.yifzy.com/img/system/wave-top.png');background-size:50% 50rpx"></view>
   </view>
   <view class="waveWrapperInner bgMiddle">
-    <view class="wave waveMiddle" style="background-image: url('http://192.168.43.187:8080/img/system/wave-mid.png');background-size:50% 60rpx"></view>
+    <view class="wave waveMiddle" style="background-image: url('https://www.yifzy.com/img/system/wave-mid.png');background-size:50% 60rpx"></view>
   </view>
   <view class="waveWrapperInner bgBottom">
-    <view class="wave waveBottom" style="background-image: url('http://192.168.43.187:8080/img/system/wave-bot.png');background-size:50% 50rpx"></view>
+    <view class="wave waveBottom" style="background-image: url('https://www.yifzy.com/img/system/wave-bot.png');background-size:50% 50rpx"></view>
   </view>
 </view>
 <view style='width: 100%;  height: 120rpx' />
@@ -60,10 +60,13 @@
     <!-- <i-cell title="我的院校" is-link url="./myUni/myUni">
       <i-icon slot="icon" type="task_fill" />
     </i-cell> -->
-    <i-cell title="我的院校" bindtap="myUni">
+    <!-- <i-cell title="我的院校" bindtap="myUni">
       <i-icon slot="icon" type="task_fill" />
+    </i-cell> -->
+    <i-cell title="" bindtap="myUni">
+      <!-- <i-icon slot="icon" type="task_fill" /> -->
     </i-cell>
-    <i-cell title="我的专业" is-link url="./myMajor/myMajor">
+    <i-cell title="教师建议专业" is-link url="./myMajor/myMajor">
       <i-icon slot="icon" type="task_fill" />
     </i-cell>
 </i-cell-group>

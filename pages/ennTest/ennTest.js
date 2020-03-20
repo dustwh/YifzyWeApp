@@ -78,7 +78,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "https://www.yifzy.com/getNextEnn",
+        url: "https://www.yifzy.com/weapp/getNextEnn",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -143,18 +143,20 @@ Page({
     })
   },
   submit: function () {
+    var sessionId = wx.getStorageSync("sessionId")
     var that = this
     var tel = wx.getStorageSync("tel")
     var ennanswers = this.data.answers
     wx.request({
-      url: "https://www.yifzy.com/wxcalculatePTypes",
+      url: "https://www.yifzy.com/weapp/wxcalculatePTypes",
       method: "POST",
       data: {
         tel: tel,
         enneagram_answer: ennanswers,
       },
       header: {
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/x-www-form-urlencoded",
+        'Cookie': sessionId
       },
       success: function (res) {
         if (res.statusCode == '200') {

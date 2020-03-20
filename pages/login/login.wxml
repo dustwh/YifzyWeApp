@@ -14,4 +14,5 @@
   <button class="p-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> 授权登录</button>
   <view style='width: 100%;  height: 15rpx' />
   <li class="label-text">新用户登录将为您自动注册</li>
+    <view style='width: 100%;  height: 70rpx' />
 </view>

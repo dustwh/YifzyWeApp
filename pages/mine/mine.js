@@ -205,7 +205,7 @@ Page({
 
   myUni:function(){
     wx.showToast({
-      title: '尚未收藏任何学校,查看与收藏功能即将上线，敬请关注',
+      title: '查看与收藏功能即将上线，敬请关注',
       icon: 'none'
     })
   },

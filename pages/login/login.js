@@ -8,7 +8,9 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    phone:""
+    phone:"",
+    isComplete:"notlogin",
+    hasSession: true
   },
   //事件处理函数
   bindViewTap: function() {
@@ -53,6 +55,7 @@ Page({
     })
   },
   onLoad: function() {
+    var that = this
     var  phone = wx.getStorageSync('phone');
     if (app.globalData.userInfo) {
       this.setData({
@@ -95,43 +98,53 @@ Page({
   getPhoneNumber: function (e) {
     // console.log(e.detail.iv);
     // console.log(e.detail.encryptedData);
+    var that = this
+    // session_key 已经失效，需要重新执行登录流程
     wx.login({
       success: res => {
-      // console.log(res.code);
-      wx.request({
-        url: 'https://www.yifzy.com/weapp/getPhoneNumber',
-        data: {
-          'encryptedData': e.detail.encryptedData,
-          'iv': e.detail.iv,
-          'codes': res.code
-        },
-        method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
-        header: {
-          'content-type': 'application/json'
-        }, // 设置请求的 header
-        success: function (res) {
-          wx.setStorageSync('phone', res.data.phoneNumber);
-          wx.setStorageSync('sessionId', 'JSESSIONID=' + res.data.yifzySessionId);
-          
-          // wx.showToast({
-          //   title: "号码为："+res.data.phoneNumber,
-          //   icon: 'none'
-          // })
-          if (res.data.if_info_compelet=="1"){
-            wx.redirectTo({
-              url: '../homepage/homepage',
+        // console.log(res.code);
+        wx.request({
+          url: 'https://www.yifzy.com/weapp/getPhoneNumber',
+          data: {
+            'encryptedData': e.detail.encryptedData,
+            'iv': e.detail.iv,
+            'codes': res.code
+          },
+          method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+          header: {
+            'content-type': 'application/json'
+          }, // 设置请求的 header
+          success: function (res) {
+            wx.setStorageSync('phone', res.data.phoneNumber);
+            wx.setStorageSync('sessionId', 'JSESSIONID=' + res.data.yifzySessionId);
+            that.setData({
+              isComplete: res.data.if_info_compelet
             })
-          }else{
-            wx.redirectTo({
-              url: '../infoInit/infoInit',
-            })
+
+            if (that.data.isComplete == "1") {
+              wx.redirectTo({
+                url: '../homepage/homepage',
+              })
+            } else if (that.data.isComplete == "0") {
+              wx.redirectTo({
+                url: '../infoInit/infoInit',
+              })
+            } else if (that.data.isComplete == "notlogin") {
+              // do nothing
+              return false
+            } else {
+              return false
+            }
+            // wx.showToast({
+            //   title: "号码为："+res.data.phoneNumber,
+            //   icon: 'none'
+            // })
+          },
+          fail: function (err) {
+            console.log(err);
           }
-        },
-        fail: function (err) {
-          console.log(err);
-        }
+        })
+      }
     })
-  }
-  })
   }
 })

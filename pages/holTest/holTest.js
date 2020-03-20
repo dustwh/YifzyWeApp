@@ -152,12 +152,13 @@ Page({
     })
   },
   submit: function () {
+    var sessionId = wx.getStorageSync("sessionId")
     var that = this
     var tel = wx.getStorageSync("tel")
     var answers = this.data.answers
     var sort = this.data.sub1 + ":" + this.data.sub2 + ":" + this.data.sub3 + ":" + this.data.sub4 + ":" + this.data.sub5 + ":" + this.data.sub6 + ":"
     wx.request({
-      url: "https://www.yifzy.com/wxCalculateJobInterest",
+      url: "https://www.yifzy.com/weapp/wxCalculateJobInterest",
       method: "POST",
       data: {
         tel: tel,
@@ -165,7 +166,8 @@ Page({
         sortresult: sort
       },
       header: {
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/x-www-form-urlencoded",
+        'Cookie': sessionId
       },
       success: function (res) {
         if (res.statusCode == '200') {

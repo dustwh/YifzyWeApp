@@ -64,10 +64,17 @@ Page({
       imodalShow:false
     })
   },
-  toMarkLine:function(){
+
+  toPiorityAndRank: function () {
     wx.showToast({
       title: '功能即将上线',
-      icon:'none'
+      icon: 'none'
+    })
+  },
+  toMarkLine: function () {
+    wx.showToast({
+      title: '功能即将上线',
+      icon: 'none'
     })
   },
   schoolInfo: function (e){

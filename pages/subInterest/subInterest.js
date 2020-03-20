@@ -240,7 +240,7 @@ Page({
     })
   },
   submit:function(){
-    
+    var sessionId = wx.getStorageSync("sessionId")
     var that = this
     var tel = wx.getStorageSync("tel")
     var siAnswers = this.data.answers
@@ -249,7 +249,7 @@ Page({
     console.log(siAnswers)
     console.log(sort)
     wx.request({
-      url: "https://www.yifzy.com/wxCalculateSITest",
+      url: "https://www.yifzy.com/weapp/wxCalculateSITest",
       method: "POST",
       data: {
         tel: tel,
@@ -257,7 +257,8 @@ Page({
         SI_sort: sort
       },
       header: {
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/x-www-form-urlencoded",
+        'Cookie': sessionId
       },
       success: function (res) {
         if (res.statusCode == '200') {
