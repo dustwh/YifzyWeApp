@@ -8,11 +8,12 @@
 <view style="margin-top:54rpx">
   <open-data class="bfont" type="userNickName"></open-data>
 </view>
-<view style='width: 100%;  height: 130rpx' />
+<view style='width: 100%;  height: 90rpx' />
 </view>
 <view style="padding:50rpx">
-  <button class="p-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber"> 授权登录</button>
-  <view style='width: 100%;  height: 15rpx' />
+  <!-- <button class="p-btn" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" style="width:100%;"> 授权登录</button> -->
+<button class="p-btn" bindtap='login' style="width:100%;"> 授权登录</button>
+  <view style='width: 100%;  height: 25rpx' />
   <li class="label-text">新用户登录将为您自动注册</li>
     <view style='width: 100%;  height: 70rpx' />
 </view>

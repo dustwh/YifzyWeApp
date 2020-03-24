@@ -35,8 +35,9 @@ Page({
   checkReport:function(){
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: 'https://www.yifzy.com/weapp/getCanSeeReport',
+      url: server_url+'/weapp/getCanSeeReport',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId
@@ -80,8 +81,9 @@ Page({
   schoolInfo: function (e){
     var schoolCode = e.currentTarget.dataset.code
     var that = this
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: 'https://www.yifzy.com/weapp/getRecSchoolInfo',
+      url: server_url+'/weapp/getRecSchoolInfo',
       method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       data: {
         schoolCode: schoolCode
@@ -171,12 +173,13 @@ Page({
     //   title: '本功能即将上线',
     // })
     wx.navigateTo({
-      url: '../MajorRepo/MajorRepo',
+      url: '../majorRepo/majorRepo',
     })
   },
   showNews:function(){
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: 'https://www.yifzy.com/weapp/getNews',
+      url: server_url+'/weapp/getNews',
       header: {
         'content-type': 'application/json',
       },
@@ -188,21 +191,21 @@ Page({
       }
     })
   },
-  // test function
-  testSession:function() {
-    var sessionId = wx.getStorageSync("sessionId")
-    // console.log(sessionId)
-    wx.request({
-      url: 'https://www.yifzy.com/weapp/testSession',
-      header: {
-        'content-type': 'application/json',
-        'Cookie': sessionId
-      },
-      success: function (res) {
-        console.log(res.data)
-      }
-    })
-  },
+  // // test function
+  // testSession:function() {
+  //   var sessionId = wx.getStorageSync("sessionId")
+  //   // console.log(sessionId)
+  //   wx.request({
+  //     url: 'http://127.20.10.3:8080/weapp/testSession',
+  //     header: {
+  //       'content-type': 'application/json',
+  //       'Cookie': sessionId
+  //     },
+  //     success: function (res) {
+  //       console.log(res.data)
+  //     }
+  //   })
+  // },
   toService:function(){
     wx.navigateTo({
       url: '../service/service',
@@ -214,8 +217,9 @@ Page({
   onShow:function(){
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: 'https://www.yifzy.com/weapp/HomePageInfoGet',
+      url: server_url+'/weapp/HomePageInfoGet',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId

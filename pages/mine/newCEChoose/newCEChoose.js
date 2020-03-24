@@ -21,8 +21,9 @@ Page({
   onLoad: function (options) {
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: 'https://www.yifzy.com/weapp/isDoneWXQuiz',
+      url: server_url + '/weapp/isDoneWXQuiz',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId
@@ -64,7 +65,7 @@ Page({
     var viceChangeIndex1=this.data.viceChangeIndex1
     var viceChangeIndex2=this.data.viceChangeIndex2
     var canSubmit=1
-    
+    var server_url = wx.getStorageSync('server_addr')
     if(mainChangeIndex==0){
       canSubmit = 0
       wx.showToast({
@@ -132,7 +133,7 @@ Page({
       subResult = subResult + subResultArr[5]
       var sessionId = wx.getStorageSync("sessionId")
       wx.request({
-        url: "http://localhost:8080/weapp/wxSaveNewCEChoose",
+        url: server_url + "/weapp/wxSaveNewCEChoose",
         method: "POST",
         data: {
           subResult: subResult

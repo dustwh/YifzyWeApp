@@ -112,8 +112,9 @@ Page({
   onShow: function () {
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: 'https://www.yifzy.com/weapp/minePageInfoOnload',
+      url: server_url + '/weapp/minePageInfoOnload',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId

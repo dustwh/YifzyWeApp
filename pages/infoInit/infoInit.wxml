@@ -1,8 +1,9 @@
 <!--pages/infoInit/infoInit.wxml-->
 <i-panel>
-<i-cell title="联系电话"><input class="weui-input" value="{{ tel }}" type="number" title="联系电话" bindinput="bindKeyInput1" placeholder="请输入手机号" /></i-cell>
+<i-cell title="联系电话"><input class="weui-input input_line" value="{{ tel }}" type="number" title="联系电话" bindinput="bindKeyInput1" placeholder="请输入手机号" disabled="true" /></i-cell>
+<i-cell title="名字"><input class="weui-input input_line" value="{{ stuName }}" title="名字" bindinput="bindNameInput" placeholder="请输入学生姓名"/></i-cell>
 <!-- <i-cell title="学生姓名"><input class="weui-input" value="{{ value1 }}" type="textarea" title="学生姓名" bindinput="bindKeyInput2" autofocus placeholder="名字" /></i-cell> -->
-<i-cell title="分数"><input class="weui-input" value="{{ mark }}" type="textarea" title="学生姓名" bindinput="bindKeyInput2" autofocus placeholder="分数" /></i-cell>
+<i-cell title="分数"><input class="weui-input input_line" value="{{ mark }}" type="textarea" title="学生姓名" bindinput="bindKeyInput2" autofocus placeholder="分数" /></i-cell>
 
 <i-cell title="年级">
 <!-- <input class="weui-input" value="{{ value3 }}" type="textarea" title="所在地" bindinput="bindKeyInput3" placeholder="省/市/区/学校" maxlength="50" /> -->

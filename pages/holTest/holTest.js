@@ -41,6 +41,7 @@ Page({
   },
   handleA: function () {
     this.data.answers = this.data.answers + this.data.mark1
+    var server_url = wx.getStorageSync('server_addr')
     if (this.data.which == 63) {
       this.setData({
         lastone: false
@@ -52,7 +53,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "https://www.yifzy.com/weapp/getNextHol",
+        url: server_url + "/weapp/getNextHol",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -75,6 +76,7 @@ Page({
   },
   handleB: function () {
     this.data.answers = this.data.answers + this.data.mark2
+    var server_url = wx.getStorageSync('server_addr')
     if (this.data.which == 63) {
       this.setData({
         lastone: false
@@ -86,7 +88,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "https://www.yifzy.com/weapp/getNextHol",
+        url: server_url + "/weapp/getNextHol",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -152,13 +154,14 @@ Page({
     })
   },
   submit: function () {
+    var server_url = wx.getStorageSync('server_addr')
     var sessionId = wx.getStorageSync("sessionId")
     var that = this
     var tel = wx.getStorageSync("tel")
     var answers = this.data.answers
     var sort = this.data.sub1 + ":" + this.data.sub2 + ":" + this.data.sub3 + ":" + this.data.sub4 + ":" + this.data.sub5 + ":" + this.data.sub6 + ":"
     wx.request({
-      url: "https://www.yifzy.com/weapp/wxCalculateJobInterest",
+      url: server_url + "/weapp/wxCalculateJobInterest",
       method: "POST",
       data: {
         tel: tel,

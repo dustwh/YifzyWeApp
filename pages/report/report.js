@@ -37,8 +37,9 @@ Page({
   onLoad: function (options) {
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: "https://www.yifzy.com/weapp/getWxEnnResult",
+      url: server_url+"/weapp/getWxEnnResult",
       method: "POST",
       header: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -73,7 +74,7 @@ Page({
 
 
     wx.request({
-      url: "https://www.yifzy.com/weapp/getWxHolRes",
+      url: server_url +"/weapp/getWxHolRes",
       method: "POST",
       header: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -105,7 +106,7 @@ Page({
 
 
     wx.request({
-      url: "https://www.yifzy.com/weapp/getWxMajorRecList",
+      url: server_url +"/weapp/getWxMajorRecList",
       method: "POST",
       header: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -142,7 +143,7 @@ Page({
 
 
     wx.request({
-      url: "https://www.yifzy.com/weapp/getItlRes",
+      url: server_url +"/weapp/getItlRes",
       method: "POST",
       header: {
         "Content-Type": "application/x-www-form-urlencoded",

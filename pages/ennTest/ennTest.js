@@ -34,6 +34,7 @@ Page({
     });
   },
   handleA: function () {
+    var server_url = wx.getStorageSync('server_addr')
     this.data.answers = this.data.answers + "0"
     if (this.data.which == 36) {
       this.setData({
@@ -46,7 +47,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "https://www.yifzy.com/weapp/getNextEnn",
+        url: server_url + "/weapp/getNextEnn",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -66,6 +67,7 @@ Page({
 
   },
   handleB: function () {
+    var server_url = wx.getStorageSync('server_addr')
     this.data.answers = this.data.answers + "1"
     if (this.data.which == 36) {
       this.setData({
@@ -78,7 +80,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "https://www.yifzy.com/weapp/getNextEnn",
+        url: server_url +"/weapp/getNextEnn",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -147,8 +149,9 @@ Page({
     var that = this
     var tel = wx.getStorageSync("tel")
     var ennanswers = this.data.answers
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: "https://www.yifzy.com/weapp/wxcalculatePTypes",
+      url: server_url +"/weapp/wxcalculatePTypes",
       method: "POST",
       data: {
         tel: tel,

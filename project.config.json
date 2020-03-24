@@ -4,13 +4,15 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
 		"coverView": true,
 		"autoAudits": false,
+		"showShadowRootInWxmlPanel": true,
+		"scopeDataCheck": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
 		"uploadWithSourceMap": true,
@@ -22,9 +24,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.10.3",
-	"appid": "wxe193ea85e9346a5f",
-	"appsecret": "4ff35b9b07d356ea0531205e6a98a527",
-	"projectname": "miniprogram-2",
+	"appid": "wx65a77d7146fde026",
+	"projectname": "YifzyWeChatMiniProgram",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

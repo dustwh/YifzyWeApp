@@ -1,0 +1,8 @@
+<view style="padding:3%">
+  
+  <i-panel>
+  <i-cell><input class="weui-input pinput" value="{{ tel }}" type="number" title="联系电话" bindinput="bindKeyInput1" placeholder="请输入手机号" /></i-cell>
+  </i-panel>
+  <view style='width: 100%;  height: 65vh' />
+  <button style="margin-left:3.5%;margin-right:3.5%" bindtap="confirm" type="default">确认</button>
+</view>
