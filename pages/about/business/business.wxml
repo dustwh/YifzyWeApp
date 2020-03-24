@@ -19,6 +19,7 @@
         <button bindtap="moveToLocation" class="page-body-button" type="default">您的位置</button>
         <!-- <button bindtap="translateMarker" class="page-body-button" type="primary">移动标注</button> -->
         <button bindtap="includePoints" type="default">我们的位置</button>
-  </view>
+      </view>
   </view>
 </view>
+<button style="margin:50rpx" bindtap="back" type="default">返回</button>

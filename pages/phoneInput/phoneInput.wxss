@@ -1,0 +1,8 @@
+/* pages/phoneInput/phoneInput.wxss */
+
+.pinput{
+  padding: 10rpx;
+  border-radius: 20rpx;
+  border-style: solid;
+  border-color: #7952b3
+}

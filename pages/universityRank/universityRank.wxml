@@ -3,8 +3,8 @@
     <i-tab key="rank1" title="校友会"></i-tab>
     <i-tab key="rank2" title="武书连"></i-tab>
     <i-tab key="rank3" title="科软"></i-tab>
-    <i-tab key="rank4" title="排名4"></i-tab>
-    <i-tab key="rank5" title="排名5"></i-tab>
+    <i-tab key="rank4" title="Qs"></i-tab>
+    <i-tab key="rank5" title="泰晤士报"></i-tab>
 </i-tabs>
 <view style='width: 100%;  height: 100rpx' />
 <image src="{{url}}"></image>

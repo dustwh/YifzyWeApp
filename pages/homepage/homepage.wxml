@@ -42,44 +42,19 @@
             <view class="flex-item small-font">测评</view>
         </view>
 
-        <view bindtap="toUniRepo" class="flex-item in-center f-col">
-        <!-- <view class="flex-item in-center f-col"> -->
+        <!-- <view bindtap="toUniRepo" class="flex-item in-center f-col">
             <view class="flex-item">
                 <i-icon type="homepage" size="32" color="#a7a7a7" />
             </view>
             <view class="flex-item small-font">院校</view>
-        </view>
+        </view> -->
 
         <view bindtap="toMajorRepo" class="flex-item in-center f-col">
             <view class="flex-item">
                 <i-icon type="tasklist" size="32" color="#644594" />
             </view>
-            <view class="flex-item small-font">专业</view>
+            <view class="flex-item small-font">专业库</view>
         </view>
-    </view>
-
-    <view class="container h-pannel-zone">
-        <view bindtap="toMarkLine" class="flex-item in-center f-col">
-            <view class="flex-item">
-                <i-icon type="other" size="32" color="#a7a7a7" />
-            </view>
-            <view class="flex-item small-font">分数线</view>
-        </view>
-
-        <view class="flex-item in-center f-col">
-            <view class="flex-item">
-                <i-icon type="keyboard" size="32" color="#a7a7a7" />
-            </view>
-            <view class="flex-item small-font">位次批次</view>
-        </view>
-
-        <view bindtap="toUniversityRank" class="flex-item in-center f-col">
-            <view class="flex-item">
-                <i-icon type="dynamic" size="32" color="#a7a7a7" />
-            </view>
-            <view class="flex-item small-font">大学排名</view>
-        </view>
-
         <view bindtap="toService" class="flex-item in-center f-col">
             <view class="flex-item">
                 <i-icon type="customerservice" size="32" color="#644594" />
@@ -87,6 +62,31 @@
             <view class="flex-item small-font">服务</view>
         </view>
     </view>
+
+    <!-- <view class="container h-pannel-zone"> -->
+        <!-- <view bindtap="toMarkLine" class="flex-item in-center f-col">
+            <view class="flex-item">
+                <i-icon type="other" size="32" color="#a7a7a7" />
+            </view>
+            <view class="flex-item small-font">分数线</view>
+        </view> -->
+
+        <!-- <view bindtap="toPiorityAndRank" class="flex-item in-center f-col">
+            <view class="flex-item">
+                <i-icon type="keyboard" size="32" color="#a7a7a7" />
+            </view>
+            <view class="flex-item small-font">位次批次</view>
+        </view> -->
+
+        <!-- <view bindtap="toUniversityRank" class="flex-item in-center f-col">
+            <view class="flex-item">
+                <i-icon type="dynamic" size="32" color="#a7a7a7" />
+            </view>
+            <view class="flex-item small-font">大学排名</view>
+        </view> -->
+
+
+    <!-- </view> -->
 </view>
 <view style='width: 100%;  height: 10rpx' />
 <view class="rec-card">

@@ -1,1 +1,6 @@
 /* pages/infoInit/infoInit.wxss */
+.input_line{
+  border-bottom-style: solid;
+  border-bottom-color: #693eb1;
+  border-bottom-width: 1rpx;
+}

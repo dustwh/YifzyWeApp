@@ -2,6 +2,7 @@
 const app = getApp()
 Page({
   data: {
+    stuName:"",
     showSub: false,
     switch1: false,
     tel: "",
@@ -38,6 +39,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+
   bindPickerChange: function (e) {
     // console.log('picker1发送选择改变，携带值为', e.detail.value)
 
@@ -93,7 +95,9 @@ Page({
     })
   },
   confirm: function () {
+    var server_url = wx.getStorageSync('server_addr')
     var that = this
+    var stuName = this.data.stuName
     var telInfo = this.data.tel
     var markInfo = this.data.mark
     var yearInfo = 2020 - parseInt(this.data.gradeIndex)
@@ -115,16 +119,18 @@ Page({
     console.log(cityInfo)
     console.log(districtInfo)
     console.log(schoolInfo)
-    if (markInfo == "" || yearInfo == 2020 || (yearInfo == 2017 && subjectcode == 0) || this.data.regionCode == "" || schoolInfo==0){
+    if (stuName==""||markInfo == "" || yearInfo == 2020 || (yearInfo == 2017 && subjectcode == 0) || this.data.regionCode == "" || schoolInfo==0){
       wx.showToast({
         title: "请补全全部信息",
         icon: 'none'
       })
     }else{
+      var sessionId = wx.getStorageSync("sessionId")
       wx.request({
-        url: "http://localhost:8080/weapp/wxSaveInitInfo",
+        url: server_url+"/weapp/wxSaveInitInfo",
         method: "POST",
         data: {
+          stuName: stuName,
           telInfo: telInfo,
           markInfo: markInfo,
           yearInfo: yearInfo,
@@ -135,12 +141,13 @@ Page({
           schoolInfo: schoolInfo
         },
         header: {
-          "Content-Type": "application/x-www-form-urlencoded"
+          "Content-Type": "application/x-www-form-urlencoded",
+          'Cookie': sessionId
         },
         success: function (res) {
           if (res.statusCode == '200') {
             console.log(res.data)
-            if (res.data == "success") {
+            if (res.data == "saveSuccess") {
               wx.setStorageSync("phone", that.data.tel)
               wx.redirectTo({
                 url: '../homepage/homepage',
@@ -164,12 +171,14 @@ Page({
   onLoad: function () {
     var that = this
     var phone = wx.getStorageSync("phone")
+    var server_url = wx.getStorageSync('server_addr')
+    console.log(phone)
     var sessionId = wx.getStorageSync("sessionId")
     this.setData({
       tel: phone
     });
     wx.request({
-      url: "http://localhost:8080/weapp/infoInitGetInfo",
+      url: server_url+"/weapp/infoInitGetInfo",
       method: "POST",
       header: {
         "Content-Type": "application/x-www-form-urlencoded",
@@ -178,6 +187,7 @@ Page({
       success: function (res) {
         if (res.statusCode == '200') {
           console.log("info 200")
+          var name = res.data.name
           var point = res.data.point;
           var year = res.data.year;
           var subjectCode = res.data.subjectCode;
@@ -185,6 +195,7 @@ Page({
           var cityCode = res.data.cityCode;
           var districtCode = res.data.districtCode;
           var stuHighschoolCode = res.data.stuHighschoolCode;
+
           console.log(point)
           console.log(year)
           console.log(subjectCode)
@@ -195,6 +206,11 @@ Page({
           var subIndexCode = subjectCode
           if (subIndexCode==5){
             subIndexCode=2
+          }
+          if (name!=null&&name!=""){
+            that.setData({
+              stuName: name
+            })
           }
           if (!(point == null)){
             console.log("ok point")
@@ -287,6 +303,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  bindNameInput: function (e) {
+    this.setData({
+      stuName: e.detail.value
+    })
   },
   bindKeyInput1: function (e) {
     this.setData({

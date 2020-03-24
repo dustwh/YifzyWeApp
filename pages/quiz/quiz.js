@@ -18,8 +18,9 @@ Page({
   toAllTest:function(){
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/getCanSeeReport',
+      url: server_url + '/weapp/getCanSeeReport',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId
@@ -45,8 +46,9 @@ Page({
   checkReport:function(){
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/getCanSeeReport',
+      url: server_url + '/weapp/getCanSeeReport',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId

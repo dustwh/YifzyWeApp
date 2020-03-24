@@ -24,8 +24,9 @@ Page({
   onLoad: function (options) {
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/minePageInfoOnload',
+      url: server_url + '/weapp/minePageInfoOnload',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId
@@ -92,6 +93,7 @@ Page({
   },
   save:function(){
     console.log("click save")
+    var server_url = wx.getStorageSync('server_addr')
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
     // var phone = wx.getStorageSync('phone');
@@ -110,7 +112,7 @@ Page({
           })
     }else{
       wx.request({
-        url: 'http://192.168.43.187:8080/weapp/savePoint',
+        url: server_url + '/weapp/savePoint',
         method: "POST",
         header: {
           "Content-Type": "application/x-www-form-urlencoded",

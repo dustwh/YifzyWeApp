@@ -1,14 +1,15 @@
 {
   "pages": [
     "pages/login/login",
+    "pages/infoInit/infoInit",
+    "pages/phoneInput/phoneInput",
     "pages/newCE/newCE",
     "pages/schoolChoose/schoolChoose",
     "pages/homepage/homepage",
     "pages/service/service",
     "pages/moreQuiz/moreQuiz",
-    "pages/MajorRepo/MajorRepo",
+    "pages/majorRepo/majorRepo",
     "pages/mine/pointEdit/pointEdit",
-    "pages/infoInit/infoInit",
     "pages/report/report",
     "pages/about/business/business",
     "pages/about/yifzy/yifzy",

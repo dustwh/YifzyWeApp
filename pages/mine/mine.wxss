@@ -1,6 +1,6 @@
 /* pages/mine/mine.wxss */
 page{
-    background-image: url("http://192.168.43.187:8080/img/system/minePageBG.jpg");
+    background-image: url("https://www.yifzy.com/img/system/minePageBG.jpg");
     background-size: contain;
     background-repeat: no-repeat;
 }

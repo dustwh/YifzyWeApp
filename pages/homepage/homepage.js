@@ -35,8 +35,9 @@ Page({
   checkReport:function(){
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/getCanSeeReport',
+      url: server_url+'/weapp/getCanSeeReport',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId
@@ -64,17 +65,25 @@ Page({
       imodalShow:false
     })
   },
-  toMarkLine:function(){
+
+  toPiorityAndRank: function () {
     wx.showToast({
       title: '功能即将上线',
-      icon:'none'
+      icon: 'none'
+    })
+  },
+  toMarkLine: function () {
+    wx.showToast({
+      title: '功能即将上线',
+      icon: 'none'
     })
   },
   schoolInfo: function (e){
     var schoolCode = e.currentTarget.dataset.code
     var that = this
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/getRecSchoolInfo',
+      url: server_url+'/weapp/getRecSchoolInfo',
       method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       data: {
         schoolCode: schoolCode
@@ -164,12 +173,13 @@ Page({
     //   title: '本功能即将上线',
     // })
     wx.navigateTo({
-      url: '../MajorRepo/MajorRepo',
+      url: '../majorRepo/majorRepo',
     })
   },
   showNews:function(){
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/getNews',
+      url: server_url+'/weapp/getNews',
       header: {
         'content-type': 'application/json',
       },
@@ -181,21 +191,21 @@ Page({
       }
     })
   },
-  // test function
-  testSession:function() {
-    var sessionId = wx.getStorageSync("sessionId")
-    // console.log(sessionId)
-    wx.request({
-      url: 'http://192.168.43.187:8080/weapp/testSession',
-      header: {
-        'content-type': 'application/json',
-        'Cookie': sessionId
-      },
-      success: function (res) {
-        console.log(res.data)
-      }
-    })
-  },
+  // // test function
+  // testSession:function() {
+  //   var sessionId = wx.getStorageSync("sessionId")
+  //   // console.log(sessionId)
+  //   wx.request({
+  //     url: 'http://127.20.10.3:8080/weapp/testSession',
+  //     header: {
+  //       'content-type': 'application/json',
+  //       'Cookie': sessionId
+  //     },
+  //     success: function (res) {
+  //       console.log(res.data)
+  //     }
+  //   })
+  // },
   toService:function(){
     wx.navigateTo({
       url: '../service/service',
@@ -207,8 +217,9 @@ Page({
   onShow:function(){
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/HomePageInfoGet',
+      url: server_url+'/weapp/HomePageInfoGet',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId

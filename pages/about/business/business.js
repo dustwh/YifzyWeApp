@@ -18,6 +18,9 @@ Page({
       iconPath: '/img/location.png'
     }]
   },
+  back:function(){
+    wx.navigateBack()
+  },
   onReady: function (e) {
     this.mapCtx = wx.createMapContext('myMap')
   },

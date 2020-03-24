@@ -39,6 +39,7 @@ Page({
     });
   },
   handleA: function(){
+    var server_url = wx.getStorageSync('server_addr')
     this.data.answers = this.data.answers + "5"
     if(this.data.which==54){
       this.setData({
@@ -51,7 +52,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "http://localhost:8080/getNextSi",
+        url: server_url + "/weapp/getNextSi",
         method: "GET",
         data:{
           towhich: that.data.which
@@ -70,6 +71,7 @@ Page({
     
   },
   handleB: function () {
+    var server_url = wx.getStorageSync('server_addr')
     this.data.answers = this.data.answers + "4"
     if(this.data.which==54){
       this.setData({
@@ -82,7 +84,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "http://localhost:8080/getNextSi",
+        url: server_url + "/weapp/getNextSi",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -101,6 +103,7 @@ Page({
     
   },
   handleC: function () {
+    var server_url = wx.getStorageSync('server_addr')
     this.data.answers = this.data.answers + "3"
     if(this.data.which==54){
       this.setData({
@@ -113,7 +116,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "http://localhost:8080/getNextSi",
+        url: server_url + "/weapp/getNextSi",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -132,6 +135,7 @@ Page({
     
   },
   handleD: function () {
+    var server_url = wx.getStorageSync('server_addr')
     this.data.answers = this.data.answers + "2"
     if(this.data.which==54){
       this.setData({
@@ -144,7 +148,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "http://localhost:8080/getNextSi",
+        url: server_url + "/weapp/getNextSi",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -163,6 +167,7 @@ Page({
     
   },
   handleE: function () {
+    var server_url = wx.getStorageSync('server_addr')
     this.data.answers = this.data.answers + "1"
     if(this.data.which==54){
       this.setData({
@@ -175,7 +180,7 @@ Page({
         which: next,
       })
       wx.request({
-        url: "http://localhost:8080/getNextSi",
+        url: server_url + "/weapp/getNextSi",
         method: "GET",
         data: {
           towhich: that.data.which
@@ -240,7 +245,8 @@ Page({
     })
   },
   submit:function(){
-    
+    var server_url = wx.getStorageSync('server_addr')
+    var sessionId = wx.getStorageSync("sessionId")
     var that = this
     var tel = wx.getStorageSync("tel")
     var siAnswers = this.data.answers
@@ -249,7 +255,7 @@ Page({
     console.log(siAnswers)
     console.log(sort)
     wx.request({
-      url: "http://localhost:8080/wxCalculateSITest",
+      url: server_url + "/weapp/wxCalculateSITest",
       method: "POST",
       data: {
         tel: tel,
@@ -257,7 +263,8 @@ Page({
         SI_sort: sort
       },
       header: {
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/x-www-form-urlencoded",
+        'Cookie': sessionId
       },
       success: function (res) {
         if (res.statusCode == '200') {

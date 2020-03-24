@@ -112,8 +112,9 @@ Page({
   onShow: function () {
     var that = this
     var sessionId = wx.getStorageSync("sessionId")
+    var server_url = wx.getStorageSync('server_addr')
     wx.request({
-      url: 'http://192.168.43.187:8080/weapp/minePageInfoOnload',
+      url: server_url + '/weapp/minePageInfoOnload',
       header: {
         'content-type': 'application/json',
         'Cookie': sessionId
@@ -205,7 +206,7 @@ Page({
 
   myUni:function(){
     wx.showToast({
-      title: '尚未收藏任何学校,查看与收藏功能即将上线，敬请关注',
+      title: '查看与收藏功能即将上线，敬请关注',
       icon: 'none'
     })
   },

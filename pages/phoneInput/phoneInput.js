@@ -1,36 +1,18 @@
-// pages/mine/myMajor/myMajor.js
+// pages/phoneInput/phoneInput.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    majors:[]
+    tel:""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
-    var sessionId = wx.getStorageSync("sessionId")
-    var server_url = wx.getStorageSync('server_addr')
-    wx.request({
-      url: server_url + '/weapp/getGuidSubjectNames',
-      header: {
-        'content-type': 'application/json',
-        'Cookie': sessionId
-      },
-      success: function (res) {
 
-        that.setData({
-          majors: res.data
-        });
-      },
-      fail: function () {
-        console.log("fail")
-      }
-    })
   },
 
   /**
@@ -38,10 +20,6 @@ Page({
    */
   onReady: function () {
 
-  },
-
-  back:function(){
-    wx.navigateBack()
   },
 
   /**
@@ -78,16 +56,39 @@ Page({
   onReachBottom: function () {
 
   },
+  bindKeyInput1: function (e) {
+    this.setData({
+      tel: e.detail.value
+    })
+  },
+  confirm:function(){
+    var tel = this.data.tel
+    var sessionId = wx.getStorageSync("sessionId")
+    console.log(tel)
+    var server_url = wx.getStorageSync('server_addr')
+    wx.request({
+      url: server_url+'/weapp/fillPhone', //接口地址
+      data: {
+        tel: tel
+      },
+      header: {
+        'content-type': 'application/json', //默认值
+        'Cookie': sessionId
+      },
+      success: function (res) {
+        console.log("-----------" + res.data)
+        wx.setStorageSync('phone', res.data);
+        wx.navigateTo({
+          url: '../infoInit/infoInit',
+        })
+      }
+    })
+  },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
 
-  },
-  toMajorRepo:function(){
-    wx.navigateTo({
-      url: '../../majorRepo/majorRepo',
-    })
   }
 })

@@ -41,12 +41,12 @@
           <view class="flex-item small-font">测评报告</view>
       </view>
 
-      <view bindtap="toMoreQuiz" class="flex-item in-center f-col">
+      <!-- <view bindtap="toMoreQuiz" class="flex-item in-center f-col">
           <view class="flex-item">
               <i-icon type="more" size="32" color="#644594" />
           </view>
           <view class="flex-item small-font">更多测评</view>
-      </view>
+      </view> -->
     </view>
   </view>
 </view>
